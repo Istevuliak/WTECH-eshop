@@ -7,6 +7,57 @@ h1 {
     color: #333;
 }
 
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #f8f8f8;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black; /* Pôvodná farba */
+    font-size: 24px; /* Veľkosť ikon */
+    transition: color 0.3s ease; /* Plynulý prechod farby */
+}
+
+/* Farba pri hoveri */
+.nav-links a:hover {
+    color: red; /* Nová farba pri hoveri */
+}
+
+/* Rovnako to funguje aj pre ikony vo vnútri odkazu */
+.nav-links i {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Farba pri hoveri ikony */
+.nav-links a:hover i {
+    color: red; /* Zmena farby ikony pri hover */
+}
+
+
 header {
     width: 100vw;
     height: 100vh;
@@ -18,3 +69,32 @@ header {
     align-items: flex-end;
     justify-content:  center;
 }
+.header-content{
+    margin-bottom: 150px;
+    color:navy;
+    text-align: center;
+}
+
+.header-content h2{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+
+.line{
+    width: 150px;
+}
+
+.header-content h2{
+    font-size: 4vmin;
+}
+
+/* moze nemusi byt */
+/* .ctn{
+    padding: 8px 15px;
+    background:navy;
+    border-radius: 30px;
+    color:whitesmoke;
+} */
+
