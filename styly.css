@@ -1,0 +1,20 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/pinch-pot-mug-1024x536.jpeg");
+    background-position: center;
+    background-size: 60% 40%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content:  center;
+}
