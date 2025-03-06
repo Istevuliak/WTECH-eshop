@@ -77,6 +77,7 @@ ul{
 /* Ikona menu */
 .menu-icon {
     position: absolute;
+    color: black;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
@@ -101,9 +102,9 @@ ul{
 header {
     width: 100vw;
     height: 100vh;
-    background-image: url("images/pinch-pot-mug-1024x536.jpeg");
+    background-image: url("images/obrazok.png");
     background-position: center;
-    background-size: 60% 40%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
@@ -138,7 +139,27 @@ header {
     color:whitesmoke;
 } */
 
-
+/* Skryjeme samotný checkbox */
+.search-toggle {
+    display: none;
+  }
+  
+  /* Input je defaultne skrytý */
+  .search-input {
+    display: none;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #070707;
+    border-radius: 4px;
+    margin-left: 10px;
+  }
+  
+  /* Ak je checkbox zaškrtnutý, zobrazí sa input */
+  .search-toggle:checked ~ .search-input {
+    display: inline-block;
+    width: 200px; /* Šírka inputu */
+  }
+  
 /* mobile device */
 @media only screen and (max-width:850px){
     .navbar{
@@ -262,4 +283,6 @@ header {
 /* Ikona vyhľadávania */
 .search-icon {
     cursor: pointer;
-    font
+    color: black;
+    font-size: 24px;
+}
