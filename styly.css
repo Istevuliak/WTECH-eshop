@@ -23,19 +23,39 @@ ul{
 
 }
 
+
+
 /* navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Tento riadok zaručí, že ikony sú na krajoch */
+    align-items: center;  /* Tento riadok zarovná všetky prvky vertikálne na stred */
     padding: 10px 20px;
     background: #f8f8f8;
+    position: relative;
 }
 
+/* Styling for links */
+.navbar a {
+    text-decoration: none;
+}
+
+/* Logotyp */
+.navbar .logo {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the logo */
+}
+
+/* Ostatné navigačné položky */
 .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
+    margin-left: auto;    
 }
 
 .nav-links li {
@@ -44,25 +64,29 @@ ul{
 
 .nav-links a {
     text-decoration: none;
-    color: black; /* Pôvodná farba */
-    font-size: 24px; /* Veľkosť ikon */
-    transition: color 0.3s ease; /* Plynulý prechod farby */
-}
-
-/* Farba pri hoveri */
-.nav-links a:hover {
-    color: red; /* Nová farba pri hoveri */
-}
-
-/* Rovnako to funguje aj pre ikony vo vnútri odkazu */
-.nav-links i {
+    color: black;
     font-size: 24px;
     transition: color 0.3s ease;
 }
 
-/* Farba pri hoveri ikony */
-.nav-links a:hover i {
-    color: red; /* Zmena farby ikony pri hover */
+/* Ikona menu */
+.menu-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Styling for links */
+.navbar a {
+    text-decoration: none;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: red; /* Color change on hover */
 }
 
 
