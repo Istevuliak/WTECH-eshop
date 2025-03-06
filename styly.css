@@ -48,6 +48,11 @@ ul{
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* Centers the logo */
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.navbar .logo{
+    margin: 0 15px;
 }
 
 /* Ostatné navigačné položky */
@@ -79,6 +84,9 @@ ul{
     cursor: pointer;
 }
 
+.menu-icon:hover{
+    color: red;
+}
 /* Styling for links */
 .navbar a {
     text-decoration: none;
@@ -234,3 +242,24 @@ header {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Skrytý input pre vyhľadávanie */
+.search-input {
+    display: none;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+/* Zobrazenie inputu, keď je checkbox zaškrtnutý */
+.search-toggle:checked + .search-icon + .search-input {
+    display: inline-block;
+    width: 200px;
+}
+
+/* Ikona vyhľadávania */
+.search-icon {
+    cursor: pointer;
+    font
