@@ -12,20 +12,53 @@
 <body>
 
     <!-- Navig bar -->
-
-    <nav class="navbar">
+    <nav class="navbar">        
         <a href="eshop.html">
-        <h1 class="logo">Keramo</h1>
+            <h1 class="logo">Keramo</h1>
         </a>
         <ul class="nav-links">
-            <li class="active"><a href="#" class="search-icon"><i class="fas fa-search"></i></a></li>
-            <li><a href="#" class="heart-icon"><i class="fas fa-heart"></i></a></li>
+            <li class="active">
+                <!-- 1. Neviditeľný checkbox -->
+                <input type="checkbox" id="search-toggle" class="search-toggle" />
+                
+                <!-- 2. Label, ktorý slúži ako "tlačidlo" - kliknutím zaškrtne checkbox -->
+                <label for="search-toggle" class="search-icon">
+                    <i class="fas fa-search"></i>
+                </label>
+                
+                <!-- 3. Input, ktorý sa zobrazí pri zaškrtnutí checkboxu -->
+                <input type="text" class="search-input" placeholder="Hľadať..." />
+            </li>
+            <li><a href="favorite.html" class="heart-icon" id="navbar-heart"><i class="fas fa-heart"></i></a></li>
             <li><a href="#" class="profile-icon"><i class="fas fa-user"></i></a></li>
             <li><a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
-        <div class="menu-icon">
+        <!-- Ikonka menu -->
+        <label for="menu-toggle" class="menu-icon">
             <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- Skrytý checkbox na ovládanie menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+        <!-- Popup menu -->
+        <div class="popup-menu">
+            <div class="popup-content">
+                <label for="menu-toggle" class="close-btn">&times;</label>
+                <ul>
+                    <li><a href="eshop.html">Domov</a></li>
+                    <li><a href="taniere.html">Taniere</a></li>
+                    <li><a href="pohare.html">Poháre</a></li>
+                    <li><a href="misky.html">Misky</a></li>
+                    <li><a href="sety.html">Sety</a></li>
+                    <li><a href="#">O nás</a></li>
+                    <li><a href="#">Kontakty</a></li>
+                </ul>
+            </div>
         </div>
+
     </nav>
+    
+
 </body>
 </html>

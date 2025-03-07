@@ -11,22 +11,54 @@
 </head>
 <body>
 
-    <!-- Navig bar -->
-
-    <nav class="navbar">
+    <nav class="navbar">        
         <a href="eshop.html">
-        <h1 class="logo">Keramo</h1>
+            <h1 class="logo">Keramo</h1>
         </a>
         <ul class="nav-links">
-            <li class="active"><a href="#" class="search-icon"><i class="fas fa-search"></i></a></li>
-            <li><a href="#" class="heart-icon"><i class="fas fa-heart"></i></a></li>
+            <li class="active">
+                <!-- 1. Neviditeľný checkbox -->
+                <input type="checkbox" id="search-toggle" class="search-toggle" />
+                
+                <!-- 2. Label, ktorý slúži ako "tlačidlo" - kliknutím zaškrtne checkbox -->
+                <label for="search-toggle" class="search-icon">
+                    <i class="fas fa-search"></i>
+                </label>
+                
+                <!-- 3. Input, ktorý sa zobrazí pri zaškrtnutí checkboxu -->
+                <input type="text" class="search-input" placeholder="Hľadať..." />
+            </li>
+            <li><a href="favorite.html" class="heart-icon" id="navbar-heart"><i class="fas fa-heart"></i></a></li>
             <li><a href="#" class="profile-icon"><i class="fas fa-user"></i></a></li>
             <li><a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
-        <div class="menu-icon">
+        <!-- Ikonka menu -->
+        <label for="menu-toggle" class="menu-icon">
             <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- Skrytý checkbox na ovládanie menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+        <!-- Popup menu -->
+        <div class="popup-menu">
+            <div class="popup-content">
+                <label for="menu-toggle" class="close-btn">&times;</label>
+                <ul>
+                    <li><a href="eshop.html">Domov</a></li>
+                    <li><a href="taniere.html">Taniere</a></li>
+                    <li><a href="pohare.html">Poháre</a></li>
+                    <li><a href="misky.html">Misky</a></li>
+                    <li><a href="sety.html">Sety</a></li>
+                    <li><a href="#">O nás</a></li>
+                    <li><a href="#">Kontakty</a></li>
+                </ul>
+            </div>
         </div>
+
     </nav>
+    
+
 
     <!-- Kategória Poháre -->
     <section class="products">
@@ -36,6 +68,12 @@
             <h3>Keramický pohár s modrou glazúrou</h3>
             <p>Kvalitná ručná práca, ideálna na rannú kávu či čaj.</p>
             <p class="price">15,00€</p>
+                        
+            <!-- Checkbox na pridanie do obľúbených -->
+            <input type="checkbox" id="f1" class="favorite-checkbox">
+            <label for="f1" class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </label>
         </div>
 
         <div class="product-item">
@@ -43,6 +81,12 @@
             <h3>Moderný keramický pohár</h3>
             <p>Minimalistický dizajn, vhodný do každej domácnosti.</p>
             <p class="price">9,00€</p>
+                        
+            <!-- Checkbox na pridanie do obľúbených -->
+            <input type="checkbox" id="f2" class="favorite-checkbox">
+            <label for="f2" class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </label>
         </div>
 
         <div class="product-item">
@@ -50,6 +94,12 @@
             <h3>Keramický pohár v tvare srdca</h3>
             <p>Darček pre zaľúbených.</p>
             <p class="price">17,00€</p>
+                        
+            <!-- Checkbox na pridanie do obľúbených -->
+            <input type="checkbox" id="f3" class="favorite-checkbox">
+            <label for="f3" class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </label>
         </div>
 
         <div class="product-item">
@@ -57,6 +107,12 @@
             <h3>Jahodový pohár</h3>
             <p>Roztomilý dizajn aj pre tých najmenších</p>
             <p class="price">12,00€</p>
+
+            <!-- Checkbox na pridanie do obľúbených -->
+            <input type="checkbox" id="f4" class="favorite-checkbox">
+            <label for="f4" class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </label>
         </div>
 
         <div class="product-item">
@@ -64,6 +120,12 @@
             <h3>Asymetrický pohár s kvetmi</h3>
             <p>Nerovnomerný tvar, originálny</p>
             <p class="price">16,00€</p>
+                        
+            <!-- Checkbox na pridanie do obľúbených -->
+            <input type="checkbox" id="f5" class="favorite-checkbox">
+            <label for="f5" class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </label>
         </div>
 
         <div class="product-item">
@@ -71,6 +133,12 @@
             <h3>Ružový kvetinový pohár</h3>
             <p>Ružový, roztomilý dizajn</p>
             <p class="price">16,00€</p>
+                        
+            <!-- Checkbox na pridanie do obľúbených -->
+            <input type="checkbox" id="f6" class="favorite-checkbox">
+            <label for="f6" class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </label>
         </div>
 
         <div class="product-item">
@@ -78,6 +146,12 @@
             <h3>Pohár Blue Flower</h3>
             <p>Modrý, jemný dizajn</p>
             <p class="price">13,00€</p>
+                        
+            <!-- Checkbox na pridanie do obľúbených -->
+            <input type="checkbox" id="f7" class="favorite-checkbox">
+            <label for="f7" class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </label>
         </div>
 
         <div class="product-item">
@@ -85,6 +159,12 @@
             <h3>Cintronový Pohár</h3>
             <p>Svieži pohár na kávičku, aj s tématickým podnosom</p>
             <p class="price">24,00€</p>
+                        
+            <!-- Checkbox na pridanie do obľúbených -->
+            <input type="checkbox" id="f8" class="favorite-checkbox">
+            <label for="f8" class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </label>
         </div>
 
         <div class="product-item">
@@ -92,8 +172,13 @@
             <h3>Muchotrávkový pohár</h3>
             <p>Ručne malované muchotrávky na keramickom hrnčeku</p>
             <p class="price">14,00€</p>
+                        
+            <!-- Checkbox na pridanie do obľúbených -->
+            <input type="checkbox" id="f9" class="favorite-checkbox">
+            <label for="f9" class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </label>
         </div>
-
         <!-- Ďalšie produkty pohárov -->
     </section>
 </body>
