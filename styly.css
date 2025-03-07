@@ -1,6 +1,6 @@
 body {
     background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    font-family: "DM Serif Display", serif;
 }
 html{
     scroll-behavior: smooth;
@@ -104,31 +104,37 @@ header {
     height: 100vh;
     background-image: url("images/obrazok.png");
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content:  center;
+    text-align: center;
 }
 .header-content{
-    margin-bottom: 150px;
-    color:navy;
+    text-align: center;
+    margin-bottom: 0;
+    color:black;
     text-align: center;
 }
 
-.header-content h2{
+/* .header-content h2{
     font-size: 7vmin;
     margin-top: 50px;
     margin-bottom: 30px;
 
-}
+} */
 
 .line{
-    width: 150px;
+    /* width: 150px; */
+    margin: 0;
+    text-align: center;
 }
 
 .header-content h2{
-    font-size: 4vmin;
+    font-size: 10rem;  /* alebo 7vmin, 50px, ako chcete */
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 /* moze nemusi byt */
@@ -206,7 +212,7 @@ header {
 
 
 .kategoria:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); 
 }
 
 /* Text v obrázku */
@@ -285,4 +291,59 @@ header {
     cursor: pointer;
     color: black;
     font-size: 24px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5;
+    color: black;
+  }
+  
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 4rem;
+}
+
+.products h2 {
+    grid-column: 1 / -1; /* Nadpis cez celú šírku */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 50px;
+}
+
+.product-item {
+    border: 1px solid #eee;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+
+.product-image {
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover; /* Oreže obrázok tak, aby vyplnil danú veľkosť */
+    border-radius: 30px;
+    transition: transform 0.5s;
+}
+
+.kategoria:hover .product-image {
+    transform: scale(1.1);
+}
+
+.price {
+    font-size: 18px;
+    color: #333;
+    text-align: center; 
+    margin-top: 5px;    /* malá medzera nad cenou */
 }
