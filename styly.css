@@ -102,7 +102,7 @@ ul{
 header {
     width: 100vw;
     height: 100vh;
-    background-image: url("images/obrazok.png");
+    background-image: url("pohare/obrazok.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -492,7 +492,7 @@ footer {
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: relative;
-    z-index: 10000;
+    z-index: 10000;  /*bez z-indexu sa ten pop up menu ukazuje za obrazkami*/
 }
 
 /* Tlačidlo na zatvorenie */
