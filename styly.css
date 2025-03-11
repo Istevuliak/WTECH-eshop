@@ -28,26 +28,26 @@ ul{
 /* navbar */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Tento riadok zaručí, že ikony sú na krajoch */
-    align-items: center;  /* Tento riadok zarovná všetky prvky vertikálne na stred */
+    justify-content: space-between; 
+    align-items: center;  
     padding: 10px 20px;
     background: #f8f8f8;
     position: relative;
 }
 
-/* Styling for links */
+/* Styling pre links */
 .navbar a {
     text-decoration: none;
 }
 
-/* Logotyp */
+/* Logo */
 .navbar .logo {
     font-size: 2rem;
     color: black;
     text-align: center;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Centers the logo */
+    transform: translateX(-50%); 
     top: 50%;
     transform: translate(-50%, -50%);
 }
@@ -133,7 +133,7 @@ header {
 }
 
 .header-content h2{
-    font-size: 10rem;  /* alebo 7vmin, 50px, ako chcete */
+    font-size: 10rem;  /* alebo 7vmin, 50px, ako chceme idk este */
     margin-top: 50px;
     margin-bottom: 30px;
 }
@@ -524,3 +524,97 @@ footer {
     color: #007bff;
 }
 
+
+.product-detail {
+    display:flex;
+    max-width: 900px;
+    margin: 50px 50px;
+    padding: 20px;
+    border-radius: 30px;
+    align-items: flex-start; /* zarovná obrázok a text vľavo */
+}
+
+.image-container img {
+    width: 600px; 
+    height: 600px;
+    border-radius: 30px;
+
+}
+
+.info-container {
+    margin-left: 30px;
+    flex: 1;
+    width:600px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.quantity select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+
+.favorite:hover {
+    background: #e6006f;
+}
+
+.cart {
+    background: #4CAF50;
+    color: white;
+}
+
+.cart:hover {
+    background: #3e8e41;
+}
