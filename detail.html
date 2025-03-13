@@ -48,10 +48,10 @@
                 <label for="menu-toggle" class="close-btn">&times;</label>
                 <ul>
                     <li><a href="eshop.html">Domov</a></li>
-                    <li><a href="taniere.html">Taniere</a></li>
                     <li><a href="pohare.html">Poháre</a></li>
-                    <li><a href="misky.html">Misky</a></li>
+                    <li><a href="taniere.html">Taniere</a></li>
                     <li><a href="sety.html">Sety</a></li>
+                    <li><a href="misky.html">Misky</a></li>
                     <li><a href="ine.html">Iné</a></li>
                     <li><a href="#">O nás</a></li>
                     <li><a href="#">Kontakty</a></li>
@@ -61,64 +61,93 @@
     </nav>
 
     <!-- Detail produktu -->
-    <section class="product-detail">
+    <section class="container">
         <div class="image-container">
             <img src="pohare/modry_pohar.jpg" alt="Modrý glazúrovaný pohár tanier">
         </div>
-        <div class="info-container">
-            <h2>Keramický pohár s modrou glazúrou</h2>
-            <p class="description">
-                Tento krásny keramický pohár s modrou glazúrou prinesie do vašej kuchyne 
-                nádych originality. Vhodný na každodenné použitie aj ako štýlový dekoračný prvok.
-            </p>
-            <p class="price">Cena: 15,00€</p>
-            
-            <!-- Výber množstva -->
-            <div class="quantity">
-                <label for="pocet">Počet kusov:</label>
-                <select id="pocet">
-                    <option value="1">1 ks</option>
-                    <option value="2">2 ks</option>
-                    <option value="3">3 ks</option>
-                    <option value="4">4 ks</option>
-                    <option value="5">5 ks</option>
-                </select>
-        </div>
-                    
-        <!-- Skrytý checkbox na ovládanie popupu košíka -->
-        <input type="checkbox" id="cart-popup-toggle" class="cart-popup-toggle">
-        <label for="cart-popup-toggle" class="cart-label">
-            <button class="cart"><i class="fas fa-shopping-cart"></i> Pridať do košíka</button>
-        </label>
+            <div class="info-container">
+                <h2>Keramický pohár s modrou glazúrou</h2>
+                <p class="description">
+                    Tento krásny keramický pohár s modrou glazúrou prinesie do vašej kuchyne 
+                    nádych originality. Vhodný na každodenné použitie aj ako štýlový dekoračný prvok.
+                </p>
+                <p class="price">Cena: 15,00€</p>
         
-        <!-- Popup Košík -->
-        <div class="cart-popup">
-            <div class="cart-popup-content">
-                <label for="cart-popup-toggle" class="close-btn">&times;</label>
-                <h2>Produkt bol pridaný do košíka</h2>
-                <div class="cart-item-summary">
-                    <img src="pohare/modry_pohar.jpg" alt="Modrý glazúrovaný pohár" class="cart-item-image">
-                    <div class="cart-item-info">
-                        <p class="cart-item-name">Keramický pohár s modrou glazúrou</p>
-                        <p class="cart-item-price">Cena: 15,00€</p>
-                        <p class="cart-item-quantity">Množstvo: 1</p>
+                <div class="quantity">
+                    <label for="pocet">Počet kusov:</label>
+                    <select id="pocet">
+                        <option value="1">1 ks</option>
+                        <option value="2">2 ks</option>
+                        <option value="3">3 ks</option>
+                        <option value="4">4 ks</option>
+                        <option value="5">5 ks</option>
+                    </select>
+                </div>
+        
+                <div class="buttons">
+                    <!-- Skrytý checkbox na ovládanie popupu -->
+                    <input type="checkbox" id="cart-popup-toggle" class="cart-popup-toggle">
+                    
+                    <!-- Tlačidlo na otvorenie popupu -->
+                    <a href="#cart-popup" class="cart"><i class="fas fa-shopping-cart"></i> Pridať do košíka</a>
+
+                    <!-- Popup -->
+                    <div id="cart-popup" class="cart-popup">
+                        <div class="cart-popup-content">
+                            <!-- Tlačidlo na zatvorenie -->
+                            <a href="#" class="close-btn">×</a>
+                            
+                            <h2>Produkt bol pridaný do košíka</h2>
+                            <div class="cart-item-summary">
+                                <img src="pohare/modry_pohar.jpg" alt="Modrý glazúrovaný pohár" class="cart-item-image">
+                                <div class="cart-item-info">
+                                    <p class="cart-item-name">Keramický pohár s modrou glazúrou</p>
+                                    <p class="cart-item-price">Cena: 15,00€</p>
+                                    <p class="cart-item-quantity">Množstvo: 1</p>
+                                </div>
+                            </div>
+                            <div class="cart-buttons">
+                                <a href="kosik.html" class="go-to-cart">Prejsť do košíka</a>
+                                <a href="#" class="continue-shopping">Pokračovať v nákupe</a>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                    <button class="favorite"><i class="fas fa-heart"></i> Pridať medzi obľúbené</button>            
+                </div>
+                
+                <!-- POPUP Košík -->
+                <div class="cart-popup">
+                    <div class="cart-popup-content">
+                        <!-- Label na zatvorenie popupu -->
+                        <label for="cart-popup-toggle" class="close-btn">×</label>
+                        
+                        <h2>Produkt bol pridaný do košíka</h2>
+                        <div class="cart-item-summary">
+                            <img src="pohare/modry_pohar.jpg" alt="Modrý glazúrovaný pohár" class="cart-item-image">
+                            <div class="cart-item-info">
+                                <p class="cart-item-name">Keramický pohár s modrou glazúrou</p>
+                                <p class="cart-item-price">Cena: 15,00€</p>
+                                <p class="cart-item-quantity">Množstvo: 1</p>
+                            </div>
+                        </div>
+                        <div class="cart-buttons">
+                            <a href="kosik.html" class="go-to-cart">Prejsť do košíka</a>
+                            <label for="cart-popup-toggle" class="continue-shopping">Pokračovať v nákupe</label>
+                        </div>
                     </div>
                 </div>
-                <div class="cart-buttons">
-                    <a href="kosik.html" class="go-to-cart">Prejsť do košíka</a>
-                    <label for="cart-popup-toggle" class="continue-shopping">Pokračovať v nákupe</label>
-                </div>
+                
+        
+                <a href="pohare.html" class="back-btn">← Späť na pohare.</a>
             </div>
         </div>
+        
+        
+        
 
-
-
-            <!-- tlačidlá -->
-            <div class="buttons">
-                <button class="favorite"><i class="fas fa-heart"></i> Pridať medzi obľúbené</button>            
-            </div>
-            
-            <a href="pohare.html" class="back-btn">← Späť na pohare.</a>
+       
         </div>
     </section>
 
