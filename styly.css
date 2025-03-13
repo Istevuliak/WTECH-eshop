@@ -768,7 +768,7 @@ button {
     padding: 20px;
 }
 
-.cart-popup-toggle:checked + .cart-popup {
+.cart-popup-toggle:checked ~ .cart-popup{
     right: 0; /* Zobraziť popup, keď je checkbox zaškrtnutý */
 }
 
@@ -797,16 +797,19 @@ button {
 }
 
 .cart-item-image {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 7px;
 }
 
 .cart-item-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 10px;
 }
 
 .cart-item-name {
@@ -853,20 +856,25 @@ button {
     display: inline-block;
     cursor: pointer;
 }
-/* 
-.cart {
+
+ .cart {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
-} */
-/* 
+} 
+ 
 .cart:hover {
     background-color: #0056b3;
-} */
+} 
 
-/* Skryť checkbox */
 .cart-popup-toggle {
-    display: none;
+    display: block;
+    width: 20px;
+    height: 20px;
 }
+
+/* .cart-popup-toggle {
+    display: none;
+} */
