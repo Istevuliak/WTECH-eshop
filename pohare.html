@@ -63,6 +63,74 @@
     <!-- Kategória Poháre -->
     <section class="products">
         <h2>Poháre</h2>
+        <div class="filter-container">
+            <!-- Skrytý checkbox na ovládanie zobrazenia filtra -->
+            <input type="checkbox" id="filter-toggle" class="filter-checkbox">
+            
+            <!-- Label slúži ako tlačidlo -->
+            <label for="filter-toggle" class="filter-button">
+                <i class="fas fa-filter"></i> Filtrovať
+            </label>
+        
+            <!-- Možnosti filtrov -->
+            <div class="filter-options">
+                <!-- Filter podľa ceny -->
+                <div class="price-section">
+                    <label>Cena:</label>
+                    <input type="range" id="price_range" name="od" min="0" max="500" value="100" step="1" class="price_range">
+                    <div class="price-range-values">
+                        <span id="price-min">0</span> - <span id="price-max">500</span>
+                    </div>
+                </div>
+        
+                <!-- Filter podľa farby (s malými farebnými okienkami) -->
+                <div class="filter-section">
+                    <label>Farba:</label>
+                    <div class="color-options">
+                        <label>
+                            <input type="radio" name="color" value="biela">
+                            <span class="color-box" style="background-color: white;"></span> Biela
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="modra">
+                            <span class="color-box" style="background-color: blue;"></span> Modrá
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="cervena">
+                            <span class="color-box" style="background-color: red;"></span> Červená
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="zelena">
+                            <span class="color-box" style="background-color: green;"></span> Zelená
+                        </label>
+                    </div>
+                </div>
+        
+                <!-- Filter podľa rozmerov -->
+                <div class="filter-section">
+                    <label>Rozmery:</label>
+                    <label><input type="radio" name="size" value="male"> Malé</label>
+                    <label><input type="radio" name="size" value="stredne"> Stredné</label>
+                    <label><input type="radio" name="size" value="velke"> Veľké</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-container">
+            <input type="checkbox" id="sort-toggle" class="sort-checkbox">
+            <label for="sort-toggle" class="sort-button">
+                <i class="fas fa-sort"></i> Triediť podľa
+            </label>
+            <div class="sort-options">
+                <label><input type="radio" name="sort" value="najlacnejsie"> Najlacnejšie</label>
+                <label><input type="radio" name="sort" value="najdrahsie"> Najdrahšie</label>
+                <label><input type="radio" name="sort" value="najnovsie"> Najnovšie</label>
+                <label><input type="radio" name="sort" value="najoblubenejsie"> Najobľúbenejšie</label>
+            </div>
+                
+        </div>
+
+        
         <div class="product-item">
             <a href="detail.html?produkt=jahodovy">
                 <img src="pohare/modry_pohar.jpg" alt="Keramický pohár s modrou glazúrou" class="product-image">

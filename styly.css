@@ -1114,12 +1114,12 @@ body.favorite-page .heart-icon i {
 }
 
 /* Skrytý checkbox */
-.filter-checkbox {
+.filter-checkbox, .sort-checkbox  {
     display: none;
 }
 
 /* Štýl tlačidla */
-.filter-button {
+.filter-button, .sort-button {
     display: inline-block;
     background-color: #ddd;
     padding: 12px 20px; /* Zvýšenie veľkosti tlačidla */
@@ -1131,12 +1131,12 @@ body.favorite-page .heart-icon i {
     width: 100%; /* Tlačidlo zaberá celú šírku */
 }
 
-.filter-button:hover {
+.filter-button:hover, .sort-button:hover {
     background-color: #bbb;
 }
 
 /* Skrytý zoznam filtrov */
-.filter-options {
+.filter-options, .sort-options {
     display: none;
     position: absolute;
     background: white;
@@ -1150,14 +1150,15 @@ body.favorite-page .heart-icon i {
 }
 
 /* Štýl jednotlivých filtrov */
-.filter-options label {
+.filter-options label, .sort-options label{
     display: block;  /* Každý filter na nový riadok */
     padding: 8px 0;  /* Zväčšenie medzier medzi položkami */
     cursor: pointer;
 }
 
 /* Keď je checkbox zapnutý, zobrazíme filtre */
-.filter-checkbox:checked + .filter-button + .filter-options {
+.filter-checkbox:checked + .filter-button + .filter-options,
+.sort-checkbox:checked + .sort-button + .sort-options  {
     display: block;
 }
 
@@ -1210,3 +1211,15 @@ body.favorite-page .heart-icon i {
     margin-bottom: 8px;
     cursor: pointer;
 }
+
+.sort-container {
+    margin-right: 50px;
+    display: inline-block;
+    width: 250px; /* Zväčšenie šírky celej kontajnera */
+    right: 50px;
+    margin-top: 150px;
+    position: absolute;
+
+}
+
+
