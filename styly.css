@@ -869,3 +869,197 @@ button {
 :target.cart-popup {
     right: 0;
 }
+
+
+
+
+
+
+/* Indikátor postupu */
+.checkout-steps {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.step {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 1.8rem;
+}
+
+.step-separator {
+    font-size: 1.8rem;
+    color: gray;
+    padding: 0 10px;
+}
+
+.step.active {
+    color: black;
+}
+
+.step.inactive {
+    color: gray;
+}
+
+
+
+
+/*kosik*/
+/* Kontajner pre košík */
+.cart-container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* sekcia s produktmi v košíku */
+.cart-items {
+    flex: 2;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+    background: #e0e0e0;
+}
+
+.cart-details {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-details h3 {
+    font-size: 1.4rem;
+    font-weight:lighter;
+    margin-right: auto;
+    white-space: nowrap;
+}
+
+.cart-info {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.cart-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
+.price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 15px;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    color:black;
+    margin-right: 10px; /* Odsadenie od obrázka */
+}
+
+.remove-btn:hover {
+    color: #cc0000;
+}
+
+/* Sekcia pre súhrn košíka */
+.cart-summary {
+    flex: 1;
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cart-summary h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.cart-summary p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.cart-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-buttons a {
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.continue-shopping {
+    background: #ddd;
+    color: #333;
+}
+
+.continue-shopping:hover {
+    background: #ccc;
+}
+
+.checkout-btn {
+    background: #333;
+    color: white;
+}
+
+.checkout-btn:hover {
+    background: black;
+}
+
+
+
+

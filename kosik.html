@@ -32,7 +32,7 @@
             </li>
             <li><a href="favorite.html" class="heart-icon" id="navbar-heart"><i class="fas fa-heart"></i></a></li>
             <li><a href="#" class="profile-icon"><i class="fas fa-user"></i></a></li>
-            <li><a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="kosik.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
         <!-- Ikonka menu -->
         <label for="menu-toggle" class="menu-icon">
@@ -59,6 +59,88 @@
             </div>
         </div>
     </nav>
+
+    <!-- Indikátor postupu -->
+    <div class="checkout-steps">
+        <span class="step active">Košík</span> <span class="step-separator">→</span>
+        <span class="step inactive">Pokladňa</span> <span class="step-separator">→</span>
+        <span class="step inactive">Potvrdenie objednávky</span>
+    </div>
+    
+
+    <!-- Obsah košíka -->
+    <section class="cart-container">
+        <!-- <h2>Váš nákupný košík</h2> -->
+        <div class="cart-items">
+            
+
+            <div class="cart-item">
+                <button class="remove-btn">&times;</button>
+                <img src="pohare/modry_pohar.jpg" alt="Vintage tanier">
+                <div class="cart-details">
+                    <h3>Keramický pohár s modrou glazúrou</h3>
+                    <div class="cart-info">
+                        <div class="cart-column">
+                            <span class="cart-label">Cena:</span>
+                            <span class="price">15,00€</span>
+                        </div>
+                        <div class="cart-column">
+                            <span class="cart-label">Množstvo:</span>
+                            <input type="number" id="quantity2" min="1" value="1" class="quantity-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <button class="remove-btn">&times;</button>
+                <img src="taniere/jahodovy.jpg" alt="Jahodový tanier">
+                <div class="cart-details">
+                    <h3>Jahodový tanier</h3>
+                    <div class="cart-info">
+                        <div class="cart-column">
+                            <span class="cart-label">Cena:</span>
+                            <span class="price">20,00€</span>
+                        </div>
+                        <div class="cart-column">
+                            <span class="cart-label">Množstvo:</span>
+                            <input type="number" id="quantity1" min="1" value="1" class="quantity-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cart-item">
+                <button class="remove-btn">&times;</button>
+                <img src="taniere/starosvecky.jpg" alt="Vintage tanier">
+                <div class="cart-details">
+                    <h3>Vintage tanier</h3>
+                    <div class="cart-info">
+                        <div class="cart-column">
+                            <span class="cart-label">Cena:</span>
+                            <span class="price">10,00€</span>
+                        </div>
+                        <div class="cart-column">
+                            <span class="cart-label">Množstvo:</span>
+                            <input type="number" id="quantity2" min="1" value="1" class="quantity-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Súčet objednávky -->
+        <div class="cart-summary">
+            <h3>Medzisúčet: <span class="total-price">45,00€</span></h3>
+            <p>Doprava bude vypočítaná pri pokladni.</p>
+            <div class="cart-buttons">
+                <a href="eshop.html" class="continue-shopping">← Pokračovať v nákupe</a>
+                <a href="checkout.html" class="checkout-btn">Pokračovať k pokladni</a>
+            </div>
+        </div>
+    </section>
+
 
     <footer>
         <div class="footer-content">
