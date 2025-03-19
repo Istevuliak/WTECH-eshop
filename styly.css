@@ -1063,3 +1063,10 @@ button {
 
 
 
+
+
+
+/*favorite stranka */
+body.favorite-page .heart-icon i {
+    color: black !important;
+}
