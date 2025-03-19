@@ -76,6 +76,24 @@
         </div> -->
     <section class="products">
         <h2>Taniere</h2>
+        <div class="filter-container">
+            <!-- Skrytý checkbox na ovládanie zobrazenia filtra -->
+            <input type="checkbox" id="filter-toggle" class="filter-checkbox">
+            
+            <!-- Label slúži ako tlačidlo -->
+            <label for="filter-toggle" class="filter-button">
+                <i class="fas fa-filter"></i> Filtrovať
+            </label>
+        
+            <!-- Možnosti filtrov -->
+            <div class="filter-options">
+                <label><input type="radio" name="filter" value="najlacnejsie"> Najlacnejšie</label>
+                <label><input type="radio" name="filter" value="najdrahsie"> Najdrahšie</label>
+                <label><input type="radio" name="filter" value="farba"> Farba</label>
+                <label><input type="radio" name="filter" value="rozmery">Rozmery</label>
+            </div>
+        </div>
+        
         <div class="product-item">
             <a href="detail.html?produkt=jahodovy">
                 <img src="taniere/jahodovy.jpg" alt="Jahodový tanier" class="product-image">

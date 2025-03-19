@@ -1104,3 +1104,58 @@ body.favorite-page .heart-icon i {
     color: black;
     font-weight: bold;
 }
+
+
+.filter-container {
+    grid-column: 1 / -1; 
+    margin-bottom: 1rem;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+
+/* Skrytý checkbox */
+.filter-checkbox {
+    display: none;
+}
+
+/* Štýl tlačidla */
+.filter-button {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.filter-button:hover {
+    background-color: #bbb;
+}
+/* Skrytý zoznam filtrov */
+.filter-options {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column; /* Zobrazenie pod sebou */
+    width: 150px;
+    z-index: 10;
+}
+
+/* Štýl jednotlivých filtrov */
+.filter-options label {
+    display: block;  /* Každý filter na nový riadok */
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+/* Keď je checkbox zapnutý, zobrazíme filtre */
+.filter-checkbox:checked + .filter-button + .filter-options {
+    display: block;
+}
