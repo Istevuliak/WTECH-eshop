@@ -61,19 +61,6 @@
     </nav>
     
 
-    
-    
-
-    <!-- Poháre Products Section -->
-    <!-- <section id="produkty">
-        <div class="produkty">
-            <div class="product">
-                <img src="images/tanier1.jpg" alt="Tanier 1" class="product-image">
-                <h3>Tanier 1</h3>
-                <p>Krásny keramický tanier</p>
-                <p class="price">20,00€</p>
-              </div>
-        </div> -->
     <section class="products">
         <h2>Taniere</h2>
         <div class="filter-container">
@@ -87,10 +74,52 @@
         
             <!-- Možnosti filtrov -->
             <div class="filter-options">
-                <label><input type="radio" name="filter" value="najlacnejsie"> Najlacnejšie</label>
-                <label><input type="radio" name="filter" value="najdrahsie"> Najdrahšie</label>
-                <label><input type="radio" name="filter" value="farba"> Farba</label>
-                <label><input type="radio" name="filter" value="rozmery">Rozmery</label>
+                <!-- Filter podľa ceny -->
+                <div class="price-section">
+                    <label>Cena:</label>
+                    <input type="range" id="price_range" name="od" min="0" max="500" value="100" step="1" class="price_range">
+                    <div class="price-range-values">
+                        <span id="price-min">0</span> - <span id="price-max">500</span>
+                    </div>
+                </div>
+        
+                <!-- Filter podľa farby (s malými farebnými okienkami) -->
+                <div class="filter-section">
+                    <label>Farba:</label>
+                    <div class="color-options">
+                        <label>
+                            <input type="radio" name="color" value="biela">
+                            <span class="color-box" style="background-color: white;"></span> Biela
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="modra">
+                            <span class="color-box" style="background-color: blue;"></span> Modrá
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="cervena">
+                            <span class="color-box" style="background-color: red;"></span> Červená
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="zelena">
+                            <span class="color-box" style="background-color: green;"></span> Zelená
+                        </label>
+                    </div>
+                </div>
+        
+                <!-- Filter podľa rozmerov -->
+                <div class="filter-section">
+                    <label>Rozmery:</label>
+                    <label><input type="radio" name="size" value="male"> Malé</label>
+                    <label><input type="radio" name="size" value="stredne"> Stredné</label>
+                    <label><input type="radio" name="size" value="velke"> Veľké</label>
+                </div>
+            </div>
+        </div>
+        
+                <!-- Filter podľa rozmerov -->
+                <div class="filter-section">
+                    <label><input type="radio" name="filter" value="rozmery"> Rozmery</label>
+                </div>
             </div>
         </div>
         

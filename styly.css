@@ -1105,14 +1105,13 @@ body.favorite-page .heart-icon i {
     font-weight: bold;
 }
 
-
 .filter-container {
     grid-column: 1 / -1; 
     margin-bottom: 1rem;
     margin-left: 50px;
     display: inline-block;
+    width: 250px; /* Zväčšenie šírky celej kontajnera */
 }
-
 
 /* Skrytý checkbox */
 .filter-checkbox {
@@ -1123,39 +1122,91 @@ body.favorite-page .heart-icon i {
 .filter-button {
     display: inline-block;
     background-color: #ddd;
-    padding: 10px 15px;
+    padding: 12px 20px; /* Zvýšenie veľkosti tlačidla */
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s;
     text-align: center;
+    width: 100%; /* Tlačidlo zaberá celú šírku */
 }
 
 .filter-button:hover {
     background-color: #bbb;
 }
+
 /* Skrytý zoznam filtrov */
 .filter-options {
     display: none;
     position: absolute;
     background: white;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 15px;  /* Zvýšené vnútorné okraje */
     margin-top: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     flex-direction: column; /* Zobrazenie pod sebou */
-    width: 150px;
+    width: 250px; /* Zvýšenie šírky zoznamu filtrov */
     z-index: 10;
 }
 
 /* Štýl jednotlivých filtrov */
 .filter-options label {
     display: block;  /* Každý filter na nový riadok */
-    padding: 5px 0;
+    padding: 8px 0;  /* Zväčšenie medzier medzi položkami */
     cursor: pointer;
 }
 
 /* Keď je checkbox zapnutý, zobrazíme filtre */
 .filter-checkbox:checked + .filter-button + .filter-options {
     display: block;
+}
+
+
+/* Štýl pre inputy na cenu */
+.price-section input[type="range"] {
+    width: 70%;  /* Celá šírka kontajnera */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Štýl pre zobrazenie hodnôt */
+.price-range-values {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* Štýl pre farebné okienka */
+.color-options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px; /* Zväčšenie medzier medzi farbami */
+}
+
+.color-box {
+    width: 15px; /* Zvýšenie veľkosti farebných okienok */
+    height: 15px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* Farby môžu byť iné */
+.color-options input[type="radio"] {
+    display: none;  /* Skryjeme samotný radio button */
+}
+
+/* Zvýraznenie vybranej farby */
+.color-options input[type="radio"]:checked + .color-box {
+    border: 2px solid #000;  /* Zvýraznenie vybranej farby */
+}
+
+/* Štýl pre rozmery (možnosti veľkosti) */
+.filter-section label {
+    margin-bottom: 8px;
+    cursor: pointer;
 }
