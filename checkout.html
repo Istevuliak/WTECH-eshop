@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Keramo.sk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styly.css">
+</head>
+<body>
+
+    <nav class="navbar">        
+        <a href="eshop.html">
+            <h1 class="logo">Keramo</h1>
+        </a>
+        <ul class="nav-links">
+            <li class="active">
+                <!-- 1. Neviditeľný checkbox -->
+                <input type="checkbox" id="search-toggle" class="search-toggle" />
+                
+                <!-- 2. Label, ktorý slúži ako "tlačidlo" - kliknutím zaškrtne checkbox -->
+                <label for="search-toggle" class="search-icon">
+                    <i class="fas fa-search"></i>
+                </label>
+                
+                <!-- 3. Input, ktorý sa zobrazí pri zaškrtnutí checkboxu -->
+                <input type="text" class="search-input" placeholder="Hľadať..." />
+            </li>
+            <li><a href="favorite.html" class="heart-icon" id="navbar-heart"><i class="far fa-heart"></i></a></li>
+            <li><a href="#" class="profile-icon"><i class="far fa-user"></i></a></li>
+            <li><a href="kosik.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+        <!-- Ikonka menu -->
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- Skrytý checkbox na ovládanie menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+        <!-- Popup menu -->
+        <div class="popup-menu">
+            <div class="popup-content">
+                <label for="menu-toggle" class="close-btn">&times;</label>
+                <ul>
+                    <li><a href="eshop.html">Domov</a></li>
+                    <li><a href="pohare.html">Poháre</a></li>
+                    <li><a href="taniere.html">Taniere</a></li>
+                    <li><a href="sety.html">Sety</a></li>
+                    <li><a href="misky.html">Misky</a></li>
+                    <li><a href="ine.html">Iné</a></li>
+                    <li><a href="#">O nás</a></li>
+                    <li><a href="#">Kontakty</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="checkout-container">
+        <!-- Ľavý stĺpec: Osobné údaje -->
+        <div class="checkout-column">
+            <div class="check-header-container">
+                <h2>Kontaktné údaje</h2>
+                <a href="profil.html" class="login-link">prihlásiť sa</a>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="email@gmail.com">
+            </div>
+            <h2>Adresa doručenia a osobné údaje</h2>
+            <div class="form-group">
+                <input type="text" placeholder="Meno">
+                <input type="text" placeholder="Priezvisko">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Firma (nepovinné)">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Ulica a číslo ulice">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Mesto">
+                <input type="text" placeholder="PSČ">
+                <select>
+                    <option>Slovensko</option>
+                    <option>Česko</option>
+                </select>
+                
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="+421">
+                <input type="text" placeholder="Telefónne číslo (000000000)">
+            </div>
+        </div>
+
+        <!-- Pravý stĺpec: Platba a doručenie -->
+        <div class="checkout-column right">
+            <div class="doprava-header-container">
+                <h2>Spôsob doručenia</h2>
+                <a href="#" class="text-o-doprave">Doprava do 7-10 pracovných dní</a>
+            </div>
+            <div class="delivery-options">
+                <label><input type="radio" name="delivery" value="kurier"> Kuriér</label>
+                <label><input type="radio" name="delivery" value="odberne"> Odberné miesto</label>
+                <label><input type="radio" name="delivery" value="osobny"> Osobný odber</label>
+            </div>
+
+            <h2>Spôsob platby</h2>
+            <div class="payment-options">
+                <label><input type="radio" name="payment" value="card"> Platobná karta</label>
+                <label><input type="radio" name="payment" value="dobierka"> Dobierka</label>
+                <label><input type="radio" name="payment" value="paypal"> PayPal</label>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Zapamätať si ma pre ďalšie nákupy</label>
+            </div>
+
+            <button class="btn-primary">Dokončiť objednávku</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">O nás</a>
+                <a href="#">Dodávatelia</a>
+                <a href="#">Kontakt</a>
+            </div>
+            <p>&copy; 2025 Keramo.sk | Všetky práva vyhradené</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

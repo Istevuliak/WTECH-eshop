@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f0f0;
+    background-color: white;
     font-family: "DM Serif Display", serif;
 }
 html{
@@ -1219,7 +1219,91 @@ body.favorite-page .heart-icon i {
     right: 50px;
     margin-top: 150px;
     position: absolute;
+}
 
+/* check out karta */
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+.checkout-column {
+    background: white;
+    padding: 20px;
+}
+.checkout-column.right {
+    border-left: 2px solid #ddd;
+    padding-left: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    font-weight:lighter;
+}
+input, select, .btn-primary {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.payment-options, .delivery-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.payment-options label, .delivery-options label{
+    margin-bottom: 10px;
+}
+.btn-primary {
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    background: #555;
 }
 
 
+.remember-me {
+    align-items: baseline;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.remember-me input {
+    width: auto; /* Zabezpečí, že checkbox nebude roztiahnutý */
+    margin: 0; /* Odstráni nežiaduce medzery */
+}
+
+.remember-me label {
+    margin-top: 60px;
+    color:#6b747e;
+    margin-left: 8px; /* Malá medzera medzi checkboxom a textom */
+    white-space: nowrap; /* Zabezpečí, že text sa nezalomí */
+}
+
+
+
+.check-header-container, .doprava-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.login-link, .text-o-doprave{
+    font-size: 14px;
+    color: #6b747e;
+    text-decoration: none;
+    cursor: pointer;
+}
+.login-link:hover {
+    text-decoration: underline;
+}
