@@ -53,6 +53,7 @@ ul{
 }
 .navbar .logo{
     margin: 0 15px;
+    font-size: 2.5rem;
 }
 
 /* Ostatné navigačné položky */
@@ -65,6 +66,7 @@ ul{
 
 .nav-links li {
     margin: 0 15px;
+    font-size:1rem;
 }
 
 .nav-links a {
@@ -1306,4 +1308,130 @@ input, select, .btn-primary {
 }
 .login-link:hover {
     text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/* Pre obrazovky menšie ako 300px */
+@media only screen and (max-width: 300px) {
+
+    .navbar {
+        flex-direction: column; /* Zmeníme na vertikálny smer */
+        align-items: flex-start; /* Zarovnáme na ľavý okraj */
+        padding: 10px; /* Zmenšený padding */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Menšie logo pre malé obrazovky */
+        margin-bottom: 10px; /* Medzera medzi logom a navigáciou */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Navigačné odkazy pod sebou */
+        width: 100%; /* Celková šírka */
+        align-items: flex-start; /* Zarovnáme na začiatok */
+        font-size: small; /* Veľkosť písma */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Medzera medzi položkami */
+        font-size: 14px; /* Menšie písmo */
+    }
+
+    .menu-icon {
+        display: block; /* Zobrazíme ikonu menu */
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+    }
+    
+    .menu-icon:hover {
+        color: red; /* Farba pri hover */
+    }
+
+    /* Pre kategórie */
+    .kategorie {
+        flex-direction: column; /* Zoradenie položiek vertikálne */
+    }
+
+    .kategoria {
+        min-width: 100%; /* Každá kategória zaberie celú šírku */
+        margin-bottom: 20px; /* Medzera medzi položkami */
+    }
+
+    /* Pre produktové položky */
+    .product-item {
+        padding: 1rem;
+    }
+
+    .modal-content {
+        width: 80%; /* Širšie na mobiloch */
+        margin: 10% auto;
+    }
+
+    .newsletter input, .newsletter button {
+        width: 100%; /* Zaberú celú šírku */
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Pre obrazovky medzi 300px a 850px */
+@media only screen and (min-width: 300px) and (max-width: 850px) {
+
+    .kategorie {
+        flex-wrap: wrap; /* Flexibilita pri zalamovaní položiek */
+    }
+
+    .kategoria {
+        min-width: 150px; /* Zníženie minimálnej šírky kategórie */
+        margin-bottom: 20px; /* Medzera medzi položkami */
+    }
+
+    .logo {
+        font-size: 2rem; /* Znížené logo pre stredné obrazovky */
+    }
+
+    .navbar {
+        padding: 10px; /* Menší padding pre stredné obrazovky */
+    }
+
+    .nav-links {
+        flex-direction: row; /* Navigačné odkazy vedľa seba */
+        font-size: 0.9rem; /* Menšie písmo pre stredné obrazovky */
+    }
+
+    .nav-links li {
+        font-size: 0.9rem; /* Zmenšenie veľkosti písma pre odkazy */
+        gap: 3px;
+    }
+
+    .menu-icon {
+        display: block; /* Ikona menu sa zobrazuje */
+        font-size: 18px;
+    }
+
+    header {
+        height: 70vh; /* Zníženie výšky na stredne veľké obrazovky */
+    }
+
+    .header-content h2 {
+        font-size: 7vmin; /* Veľkosť písma, ktorá sa prispôsobí obrazovke */
+    }
+
+    /* Responzívne pre .intro-text */
+    .intro-text {
+        font-size: 3vmin; /* Zníženie písma pre stredné obrazovky */
+        padding: 12px; /* Pridanie paddingu */
+    }
 }
