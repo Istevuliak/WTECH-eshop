@@ -1311,11 +1311,108 @@ input, select, .btn-primary {
 }
 
 
+/* Profilik */
 
+.container-profil {
+    background: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px; /* Obmedzenie šírky na veľkých obrazovkách */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: lighter;
+    margin: 0 auto; /* Zarovnanie na stred */
+}
 
+/* Hlavička formulára */
+.profil-header-container {
+    margin-bottom: 20px;
+    font-weight: lighter;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    flex-wrap: wrap; /* Ak sa nezmestí, zalomí sa do nového riadka */
 
+}
 
+.profil-header-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-right: 2px solid #ddd;
+    padding-right: 20px;
 
+}
+
+.registrer-link {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: auto; /* Posunie odkaz na pravú stranu */
+}
+
+.registrer-link:hover {
+    text-decoration: underline;
+}
+
+.form-group label {
+    display: block;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    max-width: 400px; /* Obmedzenie šírky na veľkých obrazovkách */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Štýl pre výber oslovenia */
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: wrap; /* Ak sa nezmestia, prejdú na nový riadok */
+}
+
+.radio-group label {
+    cursor: pointer;
+}
+
+/* Checkbox na newsletter */
+#newsletterik {
+    margin-right: 5px;
+}
+
+/* Tlačidlo */
+.btn-profil {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-profil:hover {
+    background-color: #333;
+}
 
 
 
@@ -1384,10 +1481,83 @@ input, select, .btn-primary {
         padding: 10px;
         font-size: 16px;
     }
+
+    .container-profil {
+        width: 90%; /* Zmenšenie šírky na mobiloch */
+        padding: 20px; /* Zmenšený padding */
+    }
+
+    .profil-header-container {
+        flex-direction: column; /* Nadpis a link pod sebou */
+        text-align: center;
+    }
+
+    .profil-header-container h2 {
+        border-right: none; /* Na mobiloch odstránime pravý border */
+        padding-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        font-size: 14px; /* Menšie písmo pre vstupy */
+        padding: 8px;
+    }
+
+    .btn-profil {
+        font-size: 14px; /* Menšie tlačidlo */
+        padding: 8px;
+    }
+
+    .cart-container {
+        flex-direction: column; /* Košík sa zobrazí pod sebou */
+        gap: 15px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .cart-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart-summary {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .cart-buttons {
+        flex-direction: column;
+    }
+
+    .checkout-steps {
+        font-size: 1.2rem; /* Zníženie veľkosti písma na menších obrazovkách */
+        margin: 10px 0; /* Zníženie okrajov */
+    }
+
+    .step {
+        font-size: 1.4rem; /* Menšie písmo pre kroky */
+        padding: 4px 12px; /* Zmenšené paddingy */
+    }
+
+    .step-separator {
+        font-size: 1.4rem; /* Menšie písmo pre oddelovače */
+    }
 }
 
+
+
 /* Pre obrazovky medzi 300px a 850px */
-@media only screen and (min-width: 300px) and (max-width: 850px) {
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
 
     .kategorie {
         flex-wrap: wrap; /* Flexibilita pri zalamovaní položiek */
@@ -1433,5 +1603,59 @@ input, select, .btn-primary {
     .intro-text {
         font-size: 3vmin; /* Zníženie písma pre stredné obrazovky */
         padding: 12px; /* Pridanie paddingu */
+    }
+
+    .container-profil {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .form-control {
+        font-size: 16px;
+    }
+
+    .btn-profil {
+        font-size: 16px;
+    }
+
+    .cart-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cart-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cart-details {
+        flex-direction: column;
+        text-align: left;
+        gap: 5px;
+    }
+
+    .cart-summary {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .checkout-steps {
+        font-size: 1.4rem; /* Zníženie veľkosti písma na stredne veľkých obrazovkách */
+        margin: 15px 0; /* Zníženie okrajov */
+    }
+
+    .step {
+        font-size: 1.6rem; /* Menšie písmo pre kroky */
+        padding: 5px 14px; /* Znížené paddingy */
+    }
+
+    .step-separator {
+        font-size: 1.6rem; /* Menšie písmo pre oddelovače */
     }
 }

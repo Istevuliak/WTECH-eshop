@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domov - Keramo.sk</title>
-
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Profil - Keramo.sk</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +34,7 @@
                 <input type="text" class="search-input" placeholder="Hľadať..." />
             </li>
             <li><a href="favorite.html" class="heart-icon"><i class="far fa-heart"></i></a></li>
-            <li><a href="profil.html" class="profile-icon"><i class="far fa-user"></i></a></li>
+            <li><a href="#" class="profile-icon"><i class="far fa-user"></i></a></li>
             <li><a href="kosik.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
         <!-- Ikonka menu -->
@@ -68,72 +65,47 @@
     </nav>
     
 
-
-    <header>
-        <div class="header-content">
-            <h2>Keramo</h2>
-            <p class="intro-text">
-                Objavte kúzlo ručne vyrábaných keramických pokladov, 
-                ktoré dodajú vášmu domovu teplo, 
-                eleganciu a jedinečný štýl.
-            </p>
-            <div class="line">
-                <a href="#kategorie" class="ctn">Nakupuj teraz</a> <!-- Odkaz na kategórie -->            
-            </div>
+    <div class="container-profil">
+        <div class="profil-header-container">
+            <h2 class="text-center">Prihlásiť sa</h2>
+            <a href="profil.html" class="registrer-link">Registrovať sa</a>
         </div>
-    </header>
-
-    <!-- sekcia s kategoriami -->
-    <section id="kategorie">
-        <div class="kategorie">
-            <div class="kategoria">
-                <a href="pohare.html">
-                    <img src="pohare/il_fullxfull.5601631086_nnqk.webp" alt="Poháre">
-                    <span class="text">Poháre</span>
-                </a>
-            </div>
-            <div class="kategoria">
-                <a href="taniere.html">
-                    <img src="taniere/tanier_kvetinajpg.jpg" alt="Taniere">
-                    <span class="text">Taniere</span>
-                </a>
-            </div>
-            <div class="kategoria">
-                <a href="sety.html">
-                    <img src="setiky/sety.jpg" alt="Sety">
-                    <span class="text">Sety</span>
-                </a>
-            </div>
-            <div class="kategoria">
-                <a href="misky.html">
-                    <img src="misky/asian misky.webp" alt="Misky">
-                    <span class="text">Misky</span>
-                </a>
-            </div>
-            <div class="kategorie">
-                <div class="kategoria">
-                    <a href="ine.html">
-                        <img src="ine/dzban s uchom.jpg" alt="Iné">
-                        <span class="text">Iné</span>
-                    </a>
-                </div>
-        </div>
-    </section>
-
-
-
         
-    
-    <!-- Sekcia na odber noviniek -->
-    <section class="newsletter-section">
-        <div class="newsletter">
-            <p>Chceš dostávať pravidelne info o novinkách a akciách? Nechaj nám email.</p>
-            <form action="#" method="POST">
-                <input type="email" placeholder="Zadaj svoj email" required>
-                <button type="submit">Odoslať</button>
-            </form>
-        </div>
-    </section>
+        <form>
+            <div class="form-group">
+                <label for="meno">Meno</label>
+                <input type="text" id="meno" class="form-control" placeholder="Zadajte svoje meno">
+            </div>
+            <div class="form-group">
+                <label for="priezvisko">Priezvisko</label>
+                <input type="text" id="priezvisko" class="form-control" placeholder="Zadajte svoje priezvisko">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="form-control" placeholder="Zadajte svoj e-mail">
+            </div>
+            <div class="form-group">
+                <label for="heslo">Heslo</label>
+                <input type="password" id="heslo" class="form-control" placeholder="Zadajte heslo">
+            </div>
+            <div class="form-group">
+                <label>Ako by sme ťa mali oslovovať?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="oslovenie" value="pani"> Pani</label>
+                    <label><input type="radio" name="oslovenie" value="pan"> Pán</label>
+                    <label><input type="radio" name="oslovenie" value="ine"> Iné</label>
+                    <label><input type="radio" name="oslovenie" value="nezadavat"> Radšej neuvádzať</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="newsletterik">
+                <label for="newsletter">Mám záujem dostávať od spoločnosti KERAMO newlettre o aktuálnych
+                    ponukách a akciových zľavách v súlade s <strong>Zásady ochrany osobných údajov. 
+                </label>
+            </div>
+            <button type="submit" class="btn-profil">Uložiť profil</button>
+        </form>
+    </div>
 
     <!-- footer -->
     <footer>
@@ -146,7 +118,7 @@
             <p>&copy; 2025 Keramo.sk | Všetky práva vyhradené</p>
         </div>
     </footer>
-
-</body>
-</html>
-
+    
+    </body>
+    </html>
+    
