@@ -577,7 +577,7 @@ h2 {
     font-size: 18px;
 }
 
-.buttons {
+.detail-buttons {
     display: flex;
     gap: 15px;
     margin-top: 20px;
@@ -633,8 +633,9 @@ button {
 }
 
 .detail-image img {
-    height: 400px;
-    width: 300px;
+    height: auto;
+    max-width: 300px;
+    width: 100%;
     border-radius: 30px;
     padding: 20px;
 }
@@ -1030,14 +1031,15 @@ button {
     margin-top: 10px;
 }
 
-.cart-buttons {
+.kosik-buttons {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 30px;
 }
 
-.cart-buttons a {
+.kosik-buttons a {
     text-align: center;
     padding: 10px;
     font-size: 1rem;
@@ -1233,10 +1235,12 @@ body.favorite-page .heart-icon i {
     margin: auto;
     padding: 20px;
 }
+
 .checkout-column {
     background: white;
     padding: 20px;
 }
+
 .checkout-column.right {
     border-left: 2px solid #ddd;
     padding-left: 30px;
@@ -1555,7 +1559,7 @@ input, select, .btn-primary {
 
     /* Kontajner detailu produktu */
     .container {
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         align-items: center;
         gap: 20px;
@@ -1589,7 +1593,7 @@ input, select, .btn-primary {
     .description,
     .price,
     .quantity,
-    .buttons,
+    .detail-buttons,
     .back-btn {
         margin-bottom: 15px;
     }
@@ -1604,7 +1608,7 @@ input, select, .btn-primary {
         padding: 5px;
     }
 
-    .buttons {
+    .detail-buttons {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -1646,7 +1650,7 @@ input, select, .btn-primary {
 
     .detail-image img {
         width: 90%;
-        max-width: 260px;
+        max-width: 200px;
         height: auto;
         border-radius: 20px;
         padding: 10px;
@@ -1719,6 +1723,17 @@ input, select, .btn-primary {
 
 /* Pre obrazovky medzi 300px a 850px */
 @media only screen and (min-width: 300px) and (max-width: 1200px) {
+    .checkout-container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .checkout-column.right {
+        border-left: none; /* Odstráni ľavý okraj na mobile */
+        border-top: 2px solid #ddd; /* Pridá vrchný okraj pre oddelenie */
+        padding-left: 20px;
+        padding-top: 30px;
+    }
 
     .kategorie {
         flex-wrap: wrap; /* Flexibilita pri zalamovaní položiek */
@@ -2003,4 +2018,20 @@ input, select, .btn-primary {
         border-radius: 20px;
     }
     
+    .filter-container, .sort-container {
+        width: 30%; /* Tlačidlá a filtre budú mať plnú šírku */
+        margin-left: 20px; /* Odstránenie odsadenia */
+        margin-right: 20px;
+        display: block; /* Usporiadanie pod sebou */
+    }
+
+    .filter-button, .sort-button {
+        padding: 15px; /* Zvýšenie veľkosti tlačidla pre lepšiu ovládateľnosť */
+        font-size: 16px; /* Väčší text pre čitateľnosť */
+    }
+
+    .filter-options, .sort-options {
+        padding: 15px;
+        text-align: left;
+    }
 }
