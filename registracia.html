@@ -1,15 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Keramo.sk</title>
+    <title>Profil - Keramo.sk</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styly.css">
+
 </head>
 <body>
+    <!-- Navig bar -->
 
     <nav class="navbar">        
         <a href="eshop.html">
@@ -28,7 +33,7 @@
                 <!-- 3. Input, ktorý sa zobrazí pri zaškrtnutí checkboxu -->
                 <input type="text" class="search-input" placeholder="Hľadať..." />
             </li>
-            <li><a href="favorite.html" class="heart-icon" id="navbar-heart"><i class="far fa-heart"></i></a></li>
+            <li><a href="favorite.html" class="heart-icon"><i class="far fa-heart"></i></a></li>
             <li><a href="#" class="profile-icon"><i class="far fa-user"></i></a></li>
             <li><a href="kosik.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
@@ -56,78 +61,54 @@
                 </ul>
             </div>
         </div>
+
     </nav>
+    
 
-    <div class="checkout-steps">
-        <span class="step inactive">Košík</span> <span class="step-separator">→</span>
-        <span class="step active">Pokladňa</span> <span class="step-separator">→</span>
-        <span class="step inactive">Potvrdenie objednávky</span>
+    <div class="container-profil">
+        <div class="profil-header-container">
+            <a href="profil.html" class="prihlasit-link">Prihlásiť sa</a>
+            <span class="divider"></span>
+            <h3 class="text-center">Registrovať sa</h3>
+        </div>
+        
+        <form>
+            <div class="form-group">
+                <label for="meno">Meno</label>
+                <input type="text" id="meno" class="form-control" placeholder="Zadajte svoje meno">
+            </div>
+            <div class="form-group">
+                <label for="priezvisko">Priezvisko</label>
+                <input type="text" id="priezvisko" class="form-control" placeholder="Zadajte svoje priezvisko">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="form-control" placeholder="Zadajte svoj e-mail">
+            </div>
+            <div class="form-group">
+                <label for="heslo">Heslo</label>
+                <input type="password" id="heslo" class="form-control" placeholder="Zadajte heslo">
+            </div>
+            <div class="form-group">
+                <label>Ako by sme ťa mali oslovovať?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="oslovenie" value="pani"> Pani</label>
+                    <label><input type="radio" name="oslovenie" value="pan"> Pán</label>
+                    <label><input type="radio" name="oslovenie" value="ine"> Iné</label>
+                    <label><input type="radio" name="oslovenie" value="nezadavat"> Radšej neuvádzať</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="newsletterik">
+                <label for="newsletter">Mám záujem dostávať od spoločnosti KERAMO newlettre o aktuálnych
+                    ponukách a akciových zľavách v súlade s <strong>Zásady ochrany osobných údajov. 
+                </label>
+            </div>
+            <button type="submit" class="btn-profil">Uložiť profil</button>
+        </form>
     </div>
 
-    <div class="checkout-container">
-        <!-- Ľavý stĺpec: Osobné údaje -->
-        <div class="checkout-column">
-            <div class="check-header-container">
-                <h2>Kontaktné údaje</h2>
-                <a href="profil.html" class="login-link">prihlásiť sa</a>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" placeholder="email@gmail.com">
-            </div>
-            <h2>Adresa doručenia a osobné údaje</h2>
-            <div class="form-group">
-                <input type="text" placeholder="Meno">
-                <input type="text" placeholder="Priezvisko">
-            </div>
-            <div class="form-group">
-                <input type="text" placeholder="Firma (nepovinné)">
-            </div>
-            <div class="form-group">
-                <input type="text" placeholder="Ulica a číslo ulice">
-            </div>
-            <div class="form-group">
-                <input type="text" placeholder="Mesto">
-                <input type="text" placeholder="PSČ">
-                <select>
-                    <option>Slovensko</option>
-                    <option>Česko</option>
-                </select>
-                
-            </div>
-            <div class="form-group">
-                <input type="text" placeholder="+421">
-                <input type="text" placeholder="Telefónne číslo (000000000)">
-            </div>
-        </div>
-
-        <!-- Pravý stĺpec: Platba a doručenie -->
-        <div class="checkout-column right">
-            <div class="doprava-header-container">
-                <h2>Spôsob doručenia</h2>
-                <a href="#" class="text-o-doprave">Doprava do 7-10 pracovných dní</a>
-            </div>
-            <div class="delivery-options">
-                <label><input type="radio" name="delivery" value="kurier"> Kuriér</label>
-                <label><input type="radio" name="delivery" value="odberne"> Odberné miesto</label>
-                <label><input type="radio" name="delivery" value="osobny"> Osobný odber</label>
-            </div>
-
-            <h2>Spôsob platby</h2>
-            <div class="payment-options">
-                <label><input type="radio" name="payment" value="card"> Platobná karta</label>
-                <label><input type="radio" name="payment" value="dobierka"> Dobierka</label>
-                <label><input type="radio" name="payment" value="paypal"> PayPal</label>
-            </div>
-
-            <div class="remember-me">
-                <input type="checkbox" id="remember">
-                <label for="remember">Zapamätať si ma pre ďalšie nákupy</label>
-            </div>
-
-            <a href="potvrdenie.html" class="btn-primary">Dokončiť objednávku</a>
-        </div>
-    </div>
-
+    <!-- footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-links">
@@ -139,5 +120,6 @@
         </div>
     </footer>
     
-</body>
-</html>
+    </body>
+    </html>
+    
