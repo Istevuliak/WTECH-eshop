@@ -11,7 +11,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: #fff7f2;
     font-family: "DM Serif Display", serif;
     margin: 0;
     padding: 0;
@@ -52,7 +52,7 @@ ul{
     justify-content: space-between; 
     align-items: center;  
     padding: 10px 20px;
-    background: #f8f8f8;
+    background: #d8b39b;
     position: relative;
 }
 
@@ -457,7 +457,7 @@ header {
 
 /* Footer */
 footer {
-    background-color: #222;
+    background-color:#bd8561;
     color: white;
     text-align: center;
     padding: 20px;
@@ -1217,7 +1217,7 @@ body.favorite-page .heart-icon i {
 /* Štýl tlačidla */
 .filter-button, .sort-button {
     display: inline-block;
-    background-color: #ddd;
+    background-color: #bd8561;
     padding: 12px 20px; /* Zvýšenie veľkosti tlačidla */
     border-radius: 5px;
     cursor: pointer;
