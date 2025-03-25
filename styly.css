@@ -71,8 +71,6 @@ ul{
     transform: translateX(-50%); 
     top: 50%;
     transform: translate(-50%, -50%);
-}
-.navbar .logo{
     margin: 0 15px;
     font-size: 2.5rem;
 }
@@ -513,7 +511,7 @@ footer {
 /* Obsah popup menu */
 .popup-content {
     background: white;
-    padding: 20px;
+    /* padding: 0px; */
     width: 100%;
     height: 100%;
     border-radius: 0; /* Odstránime zaoblenie */
@@ -1580,6 +1578,25 @@ input, select, .btn-primary {
         color: red; /* Farba pri hover */
     }
 
+    header {
+        height: 70vh; /* Zníženie výšky na stredne veľké obrazovky */
+    }
+
+    .header-content h2 {
+        font-size: 7vmin; /* Veľkosť písma, ktorá sa prispôsobí obrazovke */
+    }
+
+    /* Responzívne pre .intro-text */
+    .intro-text {
+        font-size: 3vmin; /* Zníženie písma pre stredné obrazovky */
+        padding: 12px; /* Pridanie paddingu */
+    }
+
+    .container-profil {
+        width: 80%;
+        max-width: 600px;
+    }
+
     /* Pre kategórie */
     .kategorie {
         flex-direction: column; /* Zoradenie položiek vertikálne */
@@ -1895,10 +1912,15 @@ input, select, .btn-primary {
     }    
 }
 
+@media only screen and (max-width: 485px) {
+    .logo{
+        display: none;
+    }
+}
 
 
 /* Pre obrazovky medzi 300px a 850px */
-@media only screen and (min-width: 400px) and (max-width: 1200px) {
+@media only screen and (min-width: 300px) and (max-width: 1700px) {
     .checkout-container{
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1930,17 +1952,27 @@ input, select, .btn-primary {
 
     .nav-links {
         flex-direction: row; /* Navigačné odkazy vedľa seba */
-        font-size: 0.9rem; /* Menšie písmo pre stredné obrazovky */
+        font-size: 0.7rem; /* Menšie písmo pre stredné obrazovky */
     }
 
     .nav-links li {
-        font-size: 0.9rem; /* Zmenšenie veľkosti písma pre odkazy */
+        font-size: 0.7rem; /* Zmenšenie veľkosti písma pre odkazy */
         gap: 3px;
+        margin: 2px 4px;
     }
+
+    .nav-links a {
+        padding: 3px;
+    }
+
 
     .menu-icon {
         display: block; /* Ikona menu sa zobrazuje */
         font-size: 18px;
+    }
+
+    .navbar .logo {
+        font-size: 1.3rem;
     }
 
     .popup-menu {
