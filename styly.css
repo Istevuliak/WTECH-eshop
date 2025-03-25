@@ -7,12 +7,22 @@ html {
     flex-direction: column;
 }
 
+
+@font-face {
+    font-family: 'Amsterdam Handwriting';
+    src: url('amsterdam-handwriting/Cherona.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
+
 body {
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: #fff7f2;
-    font-family: "DM Serif Display", serif;
+    font-family: "Inter", serif;
     margin: 0;
     padding: 0;
 }
@@ -27,8 +37,8 @@ html, body {
 }
 
 
-h1 {
-    color: #333;
+h1, h2 {
+    font-family: 'Amsterdam Handwriting', serif;
 }
 
 a{
@@ -63,7 +73,7 @@ ul{
 
 /* Logo */
 .navbar .logo {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: black;
     text-align: center;
     position: absolute;
@@ -71,8 +81,7 @@ ul{
     transform: translateX(-50%); 
     top: 50%;
     transform: translate(-50%, -50%);
-    margin: 0 15px;
-    font-size: 2.5rem;
+    margin: 3px 15px;
 }
 
 /* Ostatné navigačné položky */
@@ -157,11 +166,12 @@ header {
     /* width: 150px; */
     margin: 0;
     text-align: center;
+    
 }
 
 .header-content h2{
-    font-size: 10rem;  /* alebo 7vmin, 50px, ako chceme idk este */
-    margin-top: 50px;
+    font-size: 8rem;  /* alebo 7vmin, 50px, ako chceme idk este */
+    margin-top: 15%;
     margin-bottom: 30px;
 }
 
@@ -416,7 +426,7 @@ header {
 
 /* Sekcia na odber noviniek */
 .newsletter-section {
-    background-color: #f8f8f8;
+    background-color: #d8b39b;
     padding: 30px;
     text-align: center;
     margin-top: 40px;
@@ -444,7 +454,7 @@ header {
 .newsletter button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #333;
+    background-color: #bd8561;
     color: white;
     border: none;
     border-radius: 5px;
@@ -496,7 +506,7 @@ footer {
     left: -100%; /* Skryté mimo obrazovky na ľavej strane */
     width: 350px; /* Šírka menu */
     height: 100%;
-    background: rgba(255, 255, 255, 0.95); /* Svetlé pozadie */
+    background: #fff7f2; /* Svetlé pozadie */
     box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3); /* Tieň na pravej strane */
     transition: left 0.3s ease-in-out;
     z-index: 9999;
@@ -510,7 +520,7 @@ footer {
 
 /* Obsah popup menu */
 .popup-content {
-    background: white;
+    background: #fff7f2;
     /* padding: 0px; */
     width: 100%;
     height: 100%;
@@ -535,6 +545,8 @@ footer {
     list-style: none;
     padding: 0;
     margin-top: 40px;
+    font-family: 'Amsterdam Handwriting', serif;
+
 }
 
 .popup-content ul li {
@@ -543,7 +555,7 @@ footer {
 
 .popup-content ul li a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     color: #333;
     display: block;
     padding: 10px 0;
@@ -1943,7 +1955,7 @@ input, select, .btn-primary {
     }
 
     .logo {
-        font-size: 2rem; /* Znížené logo pre stredné obrazovky */
+        font-size: 1rem; /* Znížené logo pre stredné obrazovky */
     }
 
     .navbar {
@@ -1977,7 +1989,7 @@ input, select, .btn-primary {
 
     .popup-menu {
         left: -100%; /* Skrytá mimo obrazovky na ľavej strane */
-        width: 30%; /* Šírka menu bude 50% obrazovky */
+        width: 40%; /* Šírka menu bude 50% obrazovky */
         height: 50vh; /* Polovica výšky obrazovky */
     }
     /* Obsah popup menu */
@@ -1986,8 +1998,12 @@ input, select, .btn-primary {
         height: 100%;
     }
     .popup-content ul li {
-        font-size: 14px; /* Zníženie písma ešte viac */
-        
+        font-size: 14px; /* Zníženie písma ešte viac */   
+    }
+
+    .popup-content ul li a {
+        font-size: 14px;
+
     }
 
 
