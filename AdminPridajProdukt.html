@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pridať produkt - Keramo.sk</title>
+    <link rel="stylesheet" href="styly.css">
+</head>
+<body>
+
+<div class="admin-product-container">
+    <h2>Pridať nový produkt</h2>
+
+    <form class="add-product-form" enctype="multipart/form-data">
+        <div class="add-product-layout">
+            <div class="image-upload-group">
+                <label for="hlavna-fotka">Hlavná fotka produktu:</label>
+                <div class="image-upload-row">
+                    <div class="image-upload-box">
+                        <label for="hlavna-fotka" class="upload-placeholder">+</label>
+                        <input type="file" id="hlavna-fotka" name="hlavna-fotka" accept="image/*" required>
+                    </div>
+                </div>
+            
+                <label for="dopl-fotka-1">Doplnkové fotky produktu:</label>
+                <div class="image-upload-row">
+                    <div class="image-upload-box">
+                        <label for="dopl-fotka-1" class="upload-placeholder">+</label>
+                        <input type="file" id="dopl-fotka-1" name="dopl-fotka-1" accept="image/*">
+                    </div>
+                    <div class="image-upload-box">
+                        <label for="dopl-fotka-2" class="upload-placeholder">+</label>
+                        <input type="file" id="dopl-fotka-2" name="dopl-fotka-2" accept="image/*">
+                    </div>
+                    <div class="image-upload-box">
+                        <label for="dopl-fotka-2" class="upload-placeholder">+</label>
+                        <input type="file" id="dopl-fotka-2" name="dopl-fotka-2" accept="image/*">
+                    </div>
+                </div>
+            </div>
+            
+    
+            <div class="form-fields">
+                <div class="form-group">
+                    <label for="nazov">Názov produktu:</label>
+                    <input type="text" id="nazov" name="nazov" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="kratky-popis">Krátky popis:</label>
+                    <input type="text" id="kratky-popis" name="kratky-popis" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="detailny-popis">Detailný popis:</label>
+                    <textarea id="detailny-popis" name="detailny-popis" rows="5" required></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="cena">Cena (€):</label>
+                    <input type="number" id="cena" name="cena" step="5" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-buttons">
+            <a href="AdminMenu.html" class="btn-admin">Zrušiť</a>
+            <button type="submit" class="btn-admin">Pridať produkt</button>
+            
+        </div>
+        
+    </form>
+    
+</div>
+
+</body>
+</html>
