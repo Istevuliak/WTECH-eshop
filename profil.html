@@ -54,7 +54,7 @@
         <div class="container-profil">
             <div class="profil-header-container">
                 <h2 class="text-center">Prihlásiť sa</h2>
-                <span class="divider"></span>
+                <span></span>
                 <a href="registracia.html" class="register-link">Registrovať sa</a>
             </div>
 
@@ -72,7 +72,7 @@
                     <a href="#" style="font-size: 14px; color: #007bff; text-decoration: none;">Zabudol si heslo?</a>
                 </div>
 
-                <button type="submit" class="btn-profil" style="font-size: 18px; padding: 12px;">Prihlásiť sa</button>
+                <a href="prihlaseny.html" class="btn-profil" style="font-size: 18px; padding: 12px; display: block; text-align: center">Prihlásiť sa</a>                
                 <div class="admin-login-link">
                     <a href="AdminMenu.html">Prihlásiť sa ako admin</a>
                 </div>
@@ -91,6 +91,14 @@
             <p>&copy; 2025 Keramo.sk | Všetky práva vyhradené</p>
         </div>
     </footer>
+
+    <script>
+        // Redirect to profile page after successful login (example, simulate a login process)
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent actual form submission
+            window.location.href = "prihlaseny.html";  // Redirect to profile page
+        });
+    </script>
     
 </body>
 </html>

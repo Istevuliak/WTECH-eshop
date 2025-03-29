@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Keramo.sk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styly.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Navig bar -->
+        <nav class="navbar">        
+            <a href="eshop.html">
+                <h1 class="logo">Keramo</h1>
+            </a>
+            <ul class="nav-links">
+                <li><a href="favorite.html" class="heart-icon"><i class="far fa-heart"></i></a></li>
+                <li><a href="profil.html" class="profile-icon"><i class="far fa-user"></i></a></li>
+                <li><a href="kosik.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+
+        <!-- Profilová Stránka -->
+        <div class="profile-menu-container">
+            <h2>Ahoj, Emil!</h2>
+            <ul>
+                <!-- Môj profil -->
+                <li>
+                    <label for="profile-toggle">
+                        Môj profil <span class="toggle-icon">+</span>
+                    </label>
+                    <input type="checkbox" id="profile-toggle" class="toggle-input">
+                    <div class="dropdown-content">
+                        <a href="#">Zmeniť profilovú fotku</a>
+                        <a href="#">Zmeniť heslo</a>
+                        <a href="#">Vybrať jazyk</a>
+                        <a href="#">Vybrať krajinu</a>
+                        <a href="#">Zmeniť emailovú adresu</a>
+                    </div>
+                </li>
+
+                <!-- Nastavenia -->
+                <li>
+                    <label for="settings-toggle">
+                        Nastavenia <span class="toggle-icon">+</span>
+                    </label>
+                    <input type="checkbox" id="settings-toggle" class="toggle-input">
+                    <div class="dropdown-content">
+                        <a href="#">Zmeniť profilové údaje</a>
+                        <a href="#">Zmeniť preferencie</a>
+                    </div>
+                </li>
+
+                <!-- Moje objednávky -->
+                <li>
+                    <label for="orders-toggle">
+                        Moje objednávky <span class="toggle-icon">+</span>
+                    </label>
+                    <input type="checkbox" id="orders-toggle" class="toggle-input">
+                    <div class="dropdown-content">
+                        <a href="#">Zobraziť všetky objednávky</a>
+                        <a href="#">Sledovať objednávku</a>
+                        <a href="#">Prijaté objednávky</a>
+                    </div>
+                </li>
+
+                <!-- Moje obľúbené -->
+                <li>
+                    <label for="favorites-toggle">
+                        Moje obľúbené <span class="toggle-icon">+</span>
+                    </label>
+                    <input type="checkbox" id="favorites-toggle" class="toggle-input">
+                    <div class="dropdown-content">
+                        <a href="#">Zobraziť obľúbené produkty</a>
+                        <a href="#">Pridať nový produkt</a>
+                    </div>
+                </li>
+
+                <!-- Odhlásenie -->
+                <li><a href="profil.html">Odhlásiť sa</a></li>
+            </ul>
+        </div> 
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="eshop.html#o-nas">O nás</a>
+                <a href="#">Dodávatelia</a>
+                <a href="#">Kontakt</a>
+            </div>
+            <p>&copy; 2025 Keramo.sk | Všetky práva vyhradené</p>
+        </div>
+    </footer>
+</body>
+</html>
