@@ -8,6 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script>
+        function openPopup() {
+            document.getElementById("editDeletePopup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("editDeletePopup").style.display = "none";
+        }
+    </script>
 </head>
 <body>
 
@@ -17,12 +26,48 @@
     <nav class="admin-menu">
         <ul>
             <li><a href="AdminPridajProdukt.html">Pridať nový produkt</a></li>
-            <li><a href="admin_upravit_vymazat.html">Upraviť alebo vymazať produkt</a></li>
+            <li><a href="#" onclick="openPopup()">Upraviť alebo vymazať produkt</a></li>
         </ul>
     </nav>
 
     <a href="profil.html" class="logout-btn">Odhlásiť sa</a>
 </div>
+
+<div id="editDeletePopup" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Zadaj ID produktu</h2>
+        <input type="text" id="productId" placeholder="ID produktu">
+        <div class="modal-buttons">
+            <button onclick="editProduct()">Upraviť</button>
+            <button onclick="deleteProduct()">Vymazať</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function editProduct() {
+        var productId = document.getElementById("productId").value;
+        if (productId) {
+            window.location.href = "AdminExistujuciProdukt.html?id=" + productId;
+        } else {
+            alert("Zadajte ID produktu!");
+        }
+    }
+
+    function deleteProduct() {
+        var productId = document.getElementById("productId").value;
+        if (productId) {
+            if (confirm("Naozaj chcete vymazať produkt s ID " + productId + "?")) {
+                // Tu môžete pridať kód na odstránenie produktu
+                alert("Produkt s ID " + productId + " bol vymazaný.");
+                closePopup();
+            }
+        } else {
+            alert("Zadajte ID produktu!");
+        }
+    }
+</script>
 
 </body>
 </html>

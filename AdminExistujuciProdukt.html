@@ -17,16 +17,14 @@
                 <label for="hlavna-fotka">Hlavná fotka produktu:</label>
                 <div class="image-upload-row">
                     <div class="image-upload-box">
-                        <label for="hlavna-fotka" class="upload-placeholder">+</label>
-                        <input type="file" id="hlavna-fotka" name="hlavna-fotka" accept="image/*" required>
+                        <img src="pohare/modry_pohar.jpg" alt="Hlavná fotka produktu" class="product-image">
                     </div>
                 </div>
 
                 <label for="dopl-fotka-1">Doplnkové fotky produktu:</label>
                 <div class="image-upload-row">
                     <div class="image-upload-box">
-                        <label for="dopl-fotka-1" class="upload-placeholder">+</label>
-                        <input type="file" id="dopl-fotka-1" name="dopl-fotka-1" accept="image/*">
+                        <img src="pohare/detail modreho pohara.jpg" alt="Doplnková fotka 1" class="product-image">
                     </div>
                     <div class="image-upload-box">
                         <label for="dopl-fotka-2" class="upload-placeholder">+</label>
@@ -42,29 +40,30 @@
             <div class="form-fields">
                 <div class="form-group">
                     <label for="nazov">Názov produktu:</label>
-                    <input type="text" id="nazov" name="nazov" required>
+                    <input type="text" id="nazov" name="nazov" value="Ručne robený keramický pohár" required>
                 </div>
 
                 <div class="form-group">
                     <label for="kratky-popis">Krátky popis:</label>
-                    <input type="text" id="kratky-popis" name="kratky-popis" required>
+                    <input type="text" id="kratky-popis" name="kratky-popis" value="Elegantný keramický pohár s jemným vzorom." required>
                 </div>
 
                 <div class="form-group">
                     <label for="detailny-popis">Detailný popis:</label>
-                    <textarea id="detailny-popis" name="detailny-popis" rows="5" required></textarea>
+                    <textarea id="detailny-popis" name="detailny-popis" rows="5" required>
+Tento ručne robený keramický pohár je ideálny na každodenné použitie aj na špeciálne príležitosti. Vyznačuje sa jemným vzorom a kvalitným spracovaním, ktoré zabezpečuje dlhú životnosť. Dostupný v rôznych farbách a veľkostiach.
+                    </textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="cena">Cena (€):</label>
-                    <input type="number" id="cena" name="cena" step="5" required>
+                    <input type="number" id="cena" name="cena" value="15" step="5" required>
                 </div>
 
                 <div class="form-group">
                     <label for="kategoria">Kategória:</label>
                     <select id="kategoria" name="kategoria" required>
-                        <option value="" disabled selected>Vyberte kategóriu</option>
-                        <option value="pohare">Poháre</option>
+                        <option value="pohare" selected>Poháre</option>
                         <option value="taniere">Taniere</option>
                         <option value="misky">Misky</option>
                         <option value="sety">Sety</option>
