@@ -1406,6 +1406,7 @@ body.favorite-page .heart-icon i {
 
 .checkout-container {
     display: grid;
+    background-color: white;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     max-width: 100%;
