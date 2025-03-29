@@ -1489,10 +1489,13 @@ input, select, .btn-primary {
 }
 
 
+
 /* Profilik */
 .container-profil {
+    background: white;
     padding: 30px;
     width: 100%;
+    max-width: 500px; /* Obmedzenie šírky na veľkých obrazovkách */
     align-items: center;
     display: flex;
     justify-content: center;
@@ -1500,6 +1503,7 @@ input, select, .btn-primary {
     font-weight: lighter;
     margin: 0 auto; /* Zarovnanie na stred */
 }
+
 
 /* Hlavička formulára */
 .profil-header-container {
