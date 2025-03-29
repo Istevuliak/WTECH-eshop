@@ -2135,7 +2135,15 @@ input, select, .btn-primary {
 .profile-menu-container li {
     margin-bottom: 15px;
     position: relative;
+}
 
+.profile-menu-container a {
+    color: #342004;
+}
+
+.profile-menu-container a:hover {
+    color: #5c3b0c;
+    text-decoration: underline;
 }
 
 .profile-menu-container a {
@@ -2179,7 +2187,7 @@ input, select, .btn-primary {
     padding: 10px;
     text-decoration: none;
     color: #342004;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 .dropdown-content a:hover {
