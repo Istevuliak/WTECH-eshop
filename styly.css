@@ -1850,24 +1850,24 @@ input, select, .btn-primary {
         margin: 0;
         padding: 0;
         padding-top: 30px;
-        background-color: #d5cbba; /* Nastavené pozadie */
+        background-color: #ebe2d1; /* Nastavené pozadie */
     }
 
      /* Sekcie so zmeneným pozadím */
      .intro-section, .about-us, #kategorie, .products, .newsletter-section {
-        background-color: #d5cbba; /* Nastavené pozadie pre sekcie */
+        background-color: #ebe2d1; /* Nastavené pozadie pre sekcie */
     }
 
     .product-item {
-        background-color: #d5cbba; /* Nastavené pozadie pre produktové karty */
+        background-color: #ebe2d1; /* Nastavené pozadie pre produktové karty */
     }
 
     .popup-menu {
-        background-color: #d5cbba; /* Zmenené pozadie pre popup menu */
+        background-color: #ebe2d1; /* Zmenené pozadie pre popup menu */
     }
 
     header, .header-main {
-        background-color: #d5cbba; /* Nastavené pozadie pre hlavičku */
+        background-color: #ebe2d1; /* Nastavené pozadie pre hlavičku */
     }
 
     .nav-links {
@@ -1905,22 +1905,48 @@ input, select, .btn-primary {
         color: red; /* Farba pri hover */
     }
     .popup-menu {
-        left: -100%; /* Skryté mimo obrazovky */
-        width: 100%; /* Zmenšená šírka pre malé displeje */
+        position: fixed;
+        top: 0;
+        left: -100vw; /* Use viewport width to ensure it's fully off-screen */
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        background-color: #ebe2d1;
+        z-index: 10000; /* Ensure it's above everything */
+        transition: left 0.3s ease-in-out;
+        overflow-y: auto; /* Add scrolling if content is too much */
+        box-sizing: border-box;
+        padding: 15px;
     }
 
-    /* Po kliknutí na menu sa zobrazí */
+    /* Menu appears when checkbox is checked */
     .menu-checkbox:checked + .popup-menu {
-        left: 0;
+        left: 0; /* Bring into view */
     }
 
-    /* Zmenšené písmo v menu */
+    .popup-content {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .popup-content ul {
+        margin-top: 20px; /* Smaller margin */
+    }
+
+    .popup-content ul li {
+        margin: 8px 0; /* Less margin between items */
+    }
+
     .popup-content ul li a {
-        font-size: 18px;
+        font-size: 16px; /* Smaller font */
+        padding: 8px 0;
     }
 
+    /* Close button */
     .close-btn {
-        font-size: 20px;
+        font-size: 24px;
+        position: absolute;
+        top: 10px;
+        right: 15px;
     }
 
     header {
@@ -1952,9 +1978,59 @@ input, select, .btn-primary {
         margin-bottom: 20px; /* Medzera medzi položkami */
     }
 
-    /* Pre produktové položky */
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
     .product-item {
-        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 90%; /* Nastavená šírka pre mobilné zariadenia */
+        padding: 0.5rem;
+        background-color: #ebe2d1;
+    }
+
+    .product-image {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .product-item h3,
+    .product-item p,
+    .product-item .price {
+        text-align: center;
+    }
+
+    .product-item p {
+        font-size: 0.85rem;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .product-item .price {
+        font-size: 0.95rem;
+        margin: 5px 0;
+    }
+
+    .product-item .heart-icon {
+        bottom: 5px;
+        right: 10px;
+        font-size: 22px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
     }
 
     .modal-content {
@@ -2123,7 +2199,7 @@ input, select, .btn-primary {
         text-align: center;
     }
 
-    .info-container h2 {
+    h2 {
         font-size: 1.3rem;
         margin-bottom: 10px;
     }
@@ -2463,7 +2539,7 @@ input, select, .btn-primary {
         box-sizing: border-box;
     }
 
-    .info-container h2 {
+    h2 {
         font-size: 1.4rem;
         margin-bottom: 15px;
         word-wrap: break-word;
@@ -2783,23 +2859,23 @@ input, select, .btn-primary {
         margin: 0;
         padding: 0;
         padding-top: 30px;
-        background-color: #d5cbba; /* Nastavené pozadie */
+        background-color: #ebe2d1; /* Nastavené pozadie */
     }
      
      .intro-section, .about-us, #kategorie, .products, .newsletter-section {
-        background-color: #d5cbba; 
+        background-color: #ebe2d1; 
     }
 
     .product-item {
-        background-color: #d5cbba; 
+        background-color: #ebe2d1; 
     }
 
     .popup-menu {
-        background-color: #d5cbba; 
+        background-color: #ebe2d1; 
     }
 
     header, .header-main {
-        background-color: #d5cbba; 
+        background-color: #ebe2d1; 
     }
     .navbar {
         width: 100%;
