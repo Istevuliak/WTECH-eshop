@@ -2443,6 +2443,49 @@ input, select, .btn-primary {
     }
 }
 
+@media only screen and (max-width: 900px) {
+    .header-main, header {
+        width: 100vw; /* presná šírka viewportu */
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .header-main {
+        background-image: url('ine/keramo_double_zmensene.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    header {
+        background-image: url('ine/keramo_double_zmensene.png');
+        background-size: cover;
+        background-position: center center;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .line {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        top:85%
+    }
+}
 
 /* Pre obrazovky medzi 300px a 850px */
 @media only screen and (min-width: 300px) and (max-width: 1700px) {
