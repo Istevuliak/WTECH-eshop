@@ -1,69 +1,90 @@
 <!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potvrdenie</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styly.css">
-</head>
-<body>
-    <div class="wrapper">
-    <!-- Navig bar -->
-        <nav class="navbar">        
-            <a href="eshop.html">
-                <h1 class="logo">Keramo</h1>
-            </a>
-            <ul class="nav-links">
-                <li class="active">
-                    <input type="checkbox" id="search-toggle" class="search-toggle" />
-                    <label for="search-toggle" class="search-icon">
-                        <i class="fas fa-search"></i>
-                    </label>
-                    <input type="text" class="search-input" placeholder="Hľadať..." />
-                </li>
-                <li><a href="favorite.html" class="heart-icon"><i class="far fa-heart"></i></a></li>
-                <li><a href="profil.html" class="profile-icon"><i class="far fa-user"></i></a></li>
-                <li><a href="kosik.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-            <label for="menu-toggle" class="menu-icon">
-                <i class="fas fa-bars"></i>
-            </label>
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-            <div class="popup-menu">
-                <div class="popup-content">
-                    <label for="menu-toggle" class="close-btn">&times;</label>
-                    <ul>
-                        <li><a href="eshop.html">Domov</a></li>
-                        <li><a href="pohare.html">Poháre</a></li>
-                        <li><a href="taniere.html">Taniere</a></li>
-                        <li><a href="sety.html">Sety</a></li>
-                        <li><a href="misky.html">Misky</a></li>
-                        <li><a href="ine.html">Iné</a></li>
-                        <li><a href="#">O nás</a></li>
-                        <li><a href="#">Kontakty</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>      
-    </div>
-
-
-        <!-- footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="eshop.html#o-nas">O nás</a>
-                <a href="#">Dodávatelia</a>
-                <a href="#">Kontakt</a>
-            </div>
-            <p>&copy; 2025 Keramo.sk | Všetky práva vyhradené</p>
-        </div>
-    </footer>
-    
-</body>
-</html>
+ <html lang="sk">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Potvrdenie objednávky</title>
+ 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="styly.css">
+ </head>
+ <body>
+     <div class="wrapper">
+     <!-- Navig bar -->
+         <nav class="navbar">        
+             <a href="eshop.html">
+                 <h1 class="logo">Keramo</h1>
+             </a>
+             <ul class="nav-links">
+                 <li class="active">
+                     <input type="checkbox" id="search-toggle" class="search-toggle" />
+                     <label for="search-toggle" class="search-icon">
+                         <i class="fas fa-search"></i>
+                     </label>
+                     <input type="text" class="search-input" placeholder="Hľadať..." />
+                 </li>
+                 <li><a href="favorite.html" class="heart-icon"><i class="far fa-heart"></i></a></li>
+                 <li><a href="#" class="profile-icon"><i class="far fa-user"></i></a></li>
+                 <li class="profile-dropdown">
+                     <input type="checkbox" id="profileToggle" class="profile-toggle">
+                     <label for="profileToggle" class="profile-icon">
+                       <i class="far fa-user"></i> <!-- Font Awesome ikona -->
+                     </label>
+                     <div class="dropdown-menu">
+                       <a href="profil.html">Prihlásiť sa</a>
+                       <a href="#">Odhlásiť sa</a>
+                     </div>
+                   </li>
+                 <li><a href="kosik.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+             </ul>
+             <label for="menu-toggle" class="menu-icon">
+                 <i class="fas fa-bars"></i>
+             </label>
+             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+             <div class="popup-menu">
+                 <div class="popup-content">
+                     <label for="menu-toggle" class="close-btn">&times;</label>
+                     <ul>
+                         <li><a href="eshop.html">Domov</a></li>
+                         <li><a href="pohare.html">Poháre</a></li>
+                         <li><a href="taniere.html">Taniere</a></li>
+                         <li><a href="sety.html">Sety</a></li>
+                         <li><a href="misky.html">Misky</a></li>
+                         <li><a href="ine.html">Iné</a></li>
+                         <li><a href="#">O nás</a></li>
+                         <li><a href="#">Kontakty</a></li>
+                     </ul>
+                 </div>
+             </div>
+         </nav>
+         <div class="order-success-wrapper">
+             <div class="order-success">
+                 <i class="fas fa-check-circle"></i>
+                 <h1>Ďakujeme za váš nákup!</h1>
+                 <p>Váš nákup prebehol úspešne. Vaša objednávka bola prijatá a je spracovaná.</p>
+                 <p>Tešíme sa, že ste si vybrali <strong>Keramo.sk</strong>.</p>
+                 <p>Budeme vás informovať o ďalšom postupe e-mailom.</p>
+                 <a href="eshop.html" class="btn-back">Pokračovať v nakupovaní</a>
+             </div>
+         </div>
+ 
+ 
+ 
+     </div>
+         <!-- footer -->
+     <footer>
+         <div class="footer-content">
+             <div class="footer-links">
+                 <a href="eshop.html#o-nas">O nás</a>
+                 <a href="#">Dodávatelia</a>
+                 <a href="#">Kontakt</a>
+             </div>
+             <p>&copy; 2025 Keramo.sk | Všetky práva vyhradené</p>
+         </div>
+     </footer>
+ 
+ </body>
+ </html>
