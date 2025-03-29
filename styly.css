@@ -1970,6 +1970,76 @@ input, select, .btn-primary {
 
 
 
+/* Profilová stránka */
+.profile-menu-container {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.profile-menu-container h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-menu-container ul {
+    list-style: none;
+    width: 50%;
+    margin-left: 25%;
+    align-items: center;
+}
+
+.profile-menu-container li {
+    margin-bottom: 15px;
+    position: relative;
+
+}
+
+.profile-menu-container label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3vw; 
+}
+
+.toggle-icon {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+/* Skrytý checkbox */
+.toggle-input {
+    display: none;
+}
+
+/* Rozbalovací obsah */
+.dropdown-content {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #342004;
+    font-size: 2vw;
+}
+
+.dropdown-content a:hover {
+    background-color: #f3eee6;
+}
+
+.toggle-input:checked + .dropdown-content {
+    display: block;
+}
+
+
 /* Pre obrazovky menšie ako 300px */
 @media only screen and (max-width: 300px) {
     html, body {
@@ -2931,7 +3001,37 @@ input, select, .btn-primary {
         padding: 20px 0;
     }
 
-    
+    .profile-menu-container {
+        padding: 15px;
+    }
+
+    .profile-menu-container h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* Znížime šírku zoznamu a zarovnáme ho na stred */
+    .profile-menu-container ul {
+        margin-left: 20%;
+    }
+
+    /* Zmenšíme fonty a ikonky */
+    .profile-menu-container label {
+        font-size: 3.5vw;
+    }
+
+    .toggle-icon {
+        font-size: 18px;
+    }
+
+    .dropdown-content a {
+        font-size: 3vw;
+    }
+
+    /* Znížime margin medzi položkami v zozname */
+    .profile-menu-container li {
+        margin-bottom: 12px;
+    }
 }
 
 @media only screen and (min-width: 550px) and (max-width: 1400px) {
