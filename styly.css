@@ -1175,8 +1175,57 @@ button {
     background: #5c421c;
     color: white;
 }
+.profile-dropdown {
+    position: relative;
+}
 
+.profile-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+}
 
+.profile-icon:hover {
+    color: #5c3b0c;
+}
+
+.profile-toggle {
+    display: none;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: #fff7f2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e7d5bc;
+    color: #5c3b0c;
+}
+
+/* Show menu when toggle is checked */
+.profile-toggle:checked + .profile-icon + .dropdown-menu {
+    display: block;
+}
 
 
 /* Skrytý checkbox pre toggle */
