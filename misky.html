@@ -63,17 +63,15 @@
     <section class="products">
         <h2>Misky</h2>
         <div class="filter-container">
-            <!-- Skrytý checkbox na ovládanie zobrazenia filtra -->
+
             <input type="checkbox" id="filter-toggle" class="filter-checkbox">
             
-            <!-- Label slúži ako tlačidlo -->
             <label for="filter-toggle" class="filter-button">
                 <i class="fas fa-filter"></i> Filtrovať
             </label>
         
-            <!-- Možnosti filtrov -->
+            <!-- filter -->
             <div class="filter-options">
-                <!-- Filter podľa ceny -->
                 <div class="price-section">
                     <label>Cena:</label>
                     <input type="range" id="price_range" name="od" min="0" max="500" value="100" step="1" class="price_range">
@@ -82,7 +80,6 @@
                     </div>
                 </div>
         
-                <!-- Filter podľa farby (s malými farebnými okienkami) -->
                 <div class="filter-section">
                     <label>Farba:</label>
                     <div class="color-options">
@@ -105,7 +102,6 @@
                     </div>
                 </div>
         
-                <!-- Filter podľa rozmerov -->
                 <div class="filter-section">
                     <label>Rozmery:</label>
                     <label><input type="radio" name="size" value="male"> Malé</label>
@@ -139,7 +135,6 @@
             <p>Jahodová miska s asymetrickým tvarom.</p>
             <p class="price">18,00€</p>
             
-            <!-- Checkbox na pridanie do obľúbených -->
             <input type="checkbox" id="o1" class="favorite-checkbox">
             <label for="o1" class="heart-icon">
                 <i class="fas fa-heart"></i>
@@ -155,7 +150,6 @@
             <p>Roztomilá miska s hríbikmi.</p>
             <p class="price">18,00€</p>
             
-            <!-- Checkbox na pridanie do obľúbených -->
             <input type="checkbox" id="o2" class="favorite-checkbox">
             <label for="o2" class="heart-icon">
                 <i class="fas fa-heart"></i>
@@ -171,7 +165,6 @@
             <p>Kvalitná ručná práca, praktická na ovocie či dezerty.</p>
             <p class="price">14,00€</p>
             
-            <!-- Checkbox na pridanie do obľúbených -->
             <input type="checkbox" id="o3" class="favorite-checkbox">
             <label for="o3" class="heart-icon">
                 <i class="fas fa-heart"></i>
@@ -187,7 +180,6 @@
             <p>Jednoduchý minimalistický dizajn.</p>
             <p class="price">20,00€</p>
             
-            <!-- Checkbox na pridanie do obľúbených -->
             <input type="checkbox" id="o4" class="favorite-checkbox">
             <label for="o4" class="heart-icon">
                 <i class="fas fa-heart"></i>
@@ -203,7 +195,6 @@
             <p>Farebné vzory, vhodné na servírovanie snackov či dezertov.</p>
             <p class="price">10,00€</p>
             
-            <!-- Checkbox na pridanie do obľúbených -->
             <input type="checkbox" id="o5" class="favorite-checkbox">
             <label for="o5" class="heart-icon">
                 <i class="fas fa-heart"></i>
@@ -219,7 +210,6 @@
             <p>Minimalistický dizajn vyvíšených misiek.</p>
             <p class="price">24,00€</p>
             
-            <!-- Checkbox na pridanie do obľúbených -->
             <input type="checkbox" id="o6" class="favorite-checkbox">
             <label for="o6" class="heart-icon">
                 <i class="fas fa-heart"></i>
@@ -235,7 +225,6 @@
             <p>Azijská miska aj s paličkami.</p>
             <p class="price">15,00€</p>
             
-            <!-- Checkbox na pridanie do obľúbených -->
             <input type="checkbox" id="o7" class="favorite-checkbox">
             <label for="o7" class="heart-icon">
                 <i class="fas fa-heart"></i>
@@ -251,7 +240,6 @@
             <p>Elegantná miska s jemne zvlneným okrajom, ideálna na ovocie.</p>
             <p class="price">20,00€</p>
             
-            <!-- Checkbox na pridanie do obľúbených -->
             <input type="checkbox" id="o8" class="favorite-checkbox">
             <label for="o8" class="heart-icon">
                 <i class="fas fa-heart"></i>
@@ -267,7 +255,6 @@
             <p>Jedinečný tvar a glazúra, pútavý prvok do interiéru.</p>
             <p class="price">28,00€</p>
             
-            <!-- Checkbox na pridanie do obľúbených -->
             <input type="checkbox" id="o9" class="favorite-checkbox">
             <label for="o9" class="heart-icon">
                 <i class="fas fa-heart"></i>
@@ -275,6 +262,7 @@
         </div>
     </section>
 
+    <!-- strankovanie -->
     <div class="pagination">
         <button>&laquo;</button>
         <span class="page-number active-page">1</span>
