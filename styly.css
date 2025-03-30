@@ -27,7 +27,6 @@ body {
     padding: 0;
 }
 
-/* Specific background color only for eshop.html */
 body.eshop-page {
     background-color: #ebe2d1;
 }
@@ -46,7 +45,6 @@ h1, h2, .product-details h3{
     font-family: 'Amsterdam Handwriting', serif;
 }
 
-
 a{
     text-decoration: none;
 }
@@ -61,8 +59,7 @@ ul{
 }
 
 
-
-/* navbar */
+/* navbar - navigacia */
 .navbar {
     display: flex;
     justify-content: space-between; 
@@ -92,7 +89,6 @@ ul{
     margin: 3px 15px;
 }
 
-/* Ostatné navigačné položky */
 .nav-links {
     list-style: none;
     display: flex;
@@ -112,6 +108,15 @@ ul{
     transition: color 0.3s ease;
 }
 
+.navbar a {
+    text-decoration: none;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: #5c3b0c; 
+}
+
 /* Ikona menu */
 .menu-icon {
     position: absolute;
@@ -127,14 +132,7 @@ ul{
     color: #5c3b0c;
 }
 /* Styling for links */
-.navbar a {
-    text-decoration: none;
-}
 
-/* Hover effect */
-.nav-links a:hover {
-    color: #5c3b0c; /* Color change on hover */
-}
 
 .wrapper {
     flex: 1;
@@ -142,10 +140,9 @@ ul{
     flex-direction: column;
 }
 
-
 header {
     width: 100%;
-    height: 100vh; /* Use viewport height to ensure full screen size */
+    height: 100vh; 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -154,13 +151,13 @@ header {
     justify-content: center;
     text-align: center;
     position: relative;
-    padding: 0; /* Remove padding */
-    margin-bottom: 0; /* No bottom margin */
+    padding: 0;
+    margin-bottom: 0; 
 }
 header img {
-    width: 100%;       /* Zabezpečí, že obrázok vždy pokryje šírku */
-    height: 100vh;     /* Výška sa prispôsobí výške okna */
-    object-fit: cover; /* Obrázok sa orezáva a zároveň vyplní celú oblasť */
+    width: 100%;      
+    height: 100vh;     
+    object-fit: cover; 
 }
 
 .header-main {
@@ -176,7 +173,7 @@ header img {
 }
 
 .header-content {
-    padding: 40px 20px; /* alebo menej, ak chceš ešte menej priestoru */
+    padding: 40px 20px; 
     text-align: center;
     color: black;
 }
@@ -186,57 +183,54 @@ header img {
     top: 75%;
     left: 52%;
     transform: translate(-50%, -50%);
-    margin-left: 30px; /* pridá posun doprava */
+    margin-left: 30px; 
 }
 
-
-
 .header-content h2{
-    font-size: 8rem;  /* alebo 7vmin, 50px, ako chceme idk este */
+    font-size: 8rem;  
     margin-top: 15%;
     margin-bottom: 30px;
 }
 
-
-
+/*tlacidlo nakuouj teraz*/
 .ctn {
-    font-size: 1.5rem;             /* väčší font pre eleganciu */
-    color: black;                  /* čierny text */
-    text-decoration: underline;    /* podčiarknutie */
-    background: none;              /* žiadne pozadie */
-    border: none;                  /* žiadny rám */
-    padding: 0;                    /* žiadny padding */
-    font-weight: 500;              /* jemne zvýraznené */
-    transition: transform 0.3s ease; /* plynulé zväčšenie */
+    font-size: 1.5rem;             
+    color: black;                 
+    text-decoration: underline;   
+    background: none;              
+    border: none;                  
+    padding: 0;                   
+    font-weight: 500;              
+    transition: transform 0.3s ease; 
     cursor: pointer;
 }
 
 .ctn:hover {
-    transform: scale(1.08); /* jemné zväčšenie pri hoveri */
+    transform: scale(1.08); 
     text-decoration-thickness: 2px;
 }
 
 
-/* Skryjeme samotný checkbox */
+/* Skryty  checkbox */
 .search-toggle {
     display: none;
   }
   
   /* Input je defaultne skrytý */
-  .search-input {
+.search-input {
     display: none;
     padding: 5px;
     font-size: 16px;
     border: 1px solid #070707;
     border-radius: 4px;
     margin-left: 10px;
-  }
+}
   
-  /* Ak je checkbox zaškrtnutý, zobrazí sa input */
-  .search-toggle:checked ~ .search-input {
-    display: inline-block;
-    width: 200px; /* Šírka inputu */
-  }
+/* Keď je checkbox zaškrtnutý, input sa zobrazí */
+.search-toggle:checked ~ .search-input {
+display: inline-block;
+width: 200px; /* Šírka inputu */
+}
   
   /* Skrytý input pre vyhľadávanie */
 .search-input {
@@ -244,9 +238,9 @@ header img {
     padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 20px;     /* zaoblenie */
-    background-color: white; /* biele pozadie */
-    width: 250px;            /* dlhší input */
+    border-radius: 20px;    
+    background-color: white; 
+    width: 250px;            
 }
 
 
@@ -260,12 +254,12 @@ header img {
 li.active {
     display: flex;
     align-items: center;
-    gap: 8px; /* medzera medzi lupou a inputom */
+    gap: 8px; 
 }
 
 .intro-section {
     padding: 10px 0;
-    margin: 50px 0 30px 0; /* Added top and bottom margins */
+    margin: 50px 0 30px 0;
     text-align: center;
     background-color: #ebe2d1;
     line-height: 1.4;
@@ -279,16 +273,16 @@ li.active {
     line-height: 1.4;
     color: black;
     font-weight: 400;
-    padding: 0; /* zrušíme padding aj z bokov */
+    padding: 0; 
 }
 
 
 
 #kategorie {
-    padding: 0 20px; /* Reduce padding */
-    padding-top: 10px; /* Added a small top padding */
+    padding: 0 20px; 
+    padding-top: 10px; 
     text-align: center;
-    margin-top: 0; /* Make sure there's no top margin */
+    margin-top: 0; 
 }
 
 .kategorie {
@@ -296,7 +290,7 @@ li.active {
     justify-content: center;
     gap: 50px;
     margin-top: 0;
-    background-color: #ebe2d1; /* Removed margin-top (was 5px) */
+    background-color: #ebe2d1; 
 }
 
 .kategoria {
@@ -305,9 +299,9 @@ li.active {
 }
 
 .kategoria img {
-    width: 300px; /* Všetky obrázky budú rovnako široké */
-    height: 300px; /* Všetky obrázky budú rovnako vysoké */
-    object-fit: cover; /* Oreže obrázok tak, aby vyplnil danú veľkosť */
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover; 
     border-radius: 30px;
     transition: transform 0.5s;
 }
@@ -336,7 +330,7 @@ li.active {
 .modal {
     display: none; /* Skryté pred kliknutím */
     position: fixed;
-    z-index: 1; /* Umiestnenie na vrch */
+    z-index: 1; 
     left: 0;
     top: 0;
     width: 100%;
@@ -411,26 +405,26 @@ li.active {
 }
 
 .about-text {
-    max-width: 550px; /* Increased from 500px */
+    max-width: 550px; 
     text-align: left;
-    font-size: 1.7rem; /* Increased from 1.5rem */
+    font-size: 1.7rem;
 }
 
 .about-text h3 {
-    font-size: 2.1rem; /* Increased from 1.8rem */
+    font-size: 2.1rem; 
     color: #5c4a3c;
     margin-bottom: 15px;
     font-family: 'Amsterdam Handwriting', serif;
 }
 
 .about-text p {
-    font-size: 1.3rem; /* Increased from 1.1rem */
+    font-size: 1.3rem;
     line-height: 1.6;
     color: #333;
 }
 
 .about-block video.about-video {
-    width: 500px; /* Increased from 400px */
+    width: 500px; 
     height: auto;
     border-radius: 20px;
     object-fit: cover;
@@ -439,13 +433,12 @@ li.active {
 
 .products {
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 4rem;
 }
 
 .products h2 {
-    grid-column: 1 / -1; /* Nadpis cez celú šírku */
+    grid-column: 1 / -1; 
     font-size: 2rem;
     margin-bottom: 1rem;
     margin-left: 50px;
@@ -465,7 +458,7 @@ li.active {
 .product-image {
     width: 300px; 
     height: 300px; 
-    object-fit: cover; /* Oreže obrázok tak, aby vyplnil danú veľkosť */
+    object-fit: cover; 
     border-radius: 30px;
     transition: transform 0.5s;
 }
@@ -475,14 +468,13 @@ li.active {
 .product-item .heart-icon {
     position: absolute;
     bottom: 10px;
-    right: 20px; /*mimo obrazka*/
+    right: 20px; 
     font-size: 30px;
     color: #ceb48e; 
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
-/* Zmení farbu srdiečka na červenú, keď je checkbox zaškrtnutý */
 .favorite-checkbox:checked + .heart-icon {
     color:#5c3b0c;
 }
@@ -508,7 +500,7 @@ li.active {
     font-size: 18px;
     color: #333;
     text-align: center; 
-    margin-top: 5px;    /* malá medzera nad cenou */
+    margin-top: 5px;    
 }
 
 /* Sekcia na odber noviniek */
@@ -590,11 +582,11 @@ footer {
 .popup-menu {
     position: fixed;
     top: 0;
-    left: -100%; /* Skryté mimo obrazovky na ľavej strane */
-    width: 350px; /* Šírka menu */
+    left: -100%; 
+    width: 350px;
     height: 100%;
     background: #fff7f2; /* Svetlé pozadie */
-    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3); /* Tieň na pravej strane */
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3); 
     transition: left 0.3s ease-in-out;
     z-index: 9999;
     padding: 20px;
@@ -602,7 +594,7 @@ footer {
 
 /* Keď je checkbox zaškrtnutý, zobrazí menu */
 .menu-checkbox:checked + .popup-menu {
-    left: 0; /* Posunie menu do viditeľnej oblasti */
+    left: 0; 
 }
 
 /* Obsah popup menu */
@@ -614,7 +606,7 @@ footer {
     text-align: left;
     box-shadow: none;
     position: relative;
-    overflow-y: auto; /* Ak je obsahu veľa, povolí sa rolovanie */
+    overflow-y: auto; 
 }
 
 /* Tlačidlo na zatvorenie (vľavo hore) */
@@ -623,7 +615,7 @@ footer {
     cursor: pointer;
     position: absolute;
     top: 10px;
-    right :15px; /* Posunuté doľava, keďže menu je na ľavej strane */
+    right :15px; 
 }
 
 /* Štýl pre odkazy */
@@ -656,8 +648,8 @@ footer {
     display: flex;
     padding: 20px;
     gap: 20px;
-    margin-bottom: 20px; /* Add margin to prevent overlap with the next section */
-    align-items: center;        /* Vertically center the items */
+    margin-bottom: 20px; 
+    align-items: center;       
     justify-content: space-between;
 
 }
@@ -800,7 +792,7 @@ button {
 }
 
 
-/* Review section styling */
+/* recenzie */
 .reviews {
     display: flex;
     gap: 20px;
@@ -824,8 +816,8 @@ button {
 }
 
 .stars {
-    color: #ffd700; /* Gold color for the stars */
-    font-size: 18px; /* Size of the stars */
+    color: #ffd700; 
+    font-size: 18px; 
     margin: 5px 0;
 }
 
@@ -862,7 +854,7 @@ button {
 .suggestion-item img {
     width: 300px; 
     height: 300px; 
-    object-fit: cover; /* Oreže obrázok tak, aby vyplnil danú veľkosť */
+    object-fit: cover; 
     border-radius: 30px;
     transition: transform 0.5s;
 }
@@ -878,7 +870,7 @@ button {
 .cart-popup {
     position: fixed;
     top: 0;
-    right: -100%; /* Popup je skrytý mimo obrazovky */
+    right: -100%; 
     width: 300px;
     height: 100%;
     background-color: #fff7f2;
@@ -889,7 +881,7 @@ button {
 }
 
 .cart-popup-toggle:checked ~ .cart-popup{
-    right: 0; /* Zobraziť popup, keď je checkbox zaškrtnutý */
+    right: 0; 
 }
 
 .cart-popup-content {
@@ -993,12 +985,9 @@ button {
     display: none;
 } 
 
-/* Keď je popup v URL (má hash #cart-popup), zobrazíme ho */
 :target.cart-popup {
     right: 0;
 }
-
-
 
 
 /* Indikátor postupu */
@@ -1119,7 +1108,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     color:black;
-    margin-right: 10px; /* Odsadenie od obrázka */
+    margin-right: 10px; 
 }
 
 .remove-btn:hover {
@@ -1343,12 +1332,12 @@ body.favorite-page .heart-icon i {
     margin-bottom: 1rem;
     margin-left: 50px;
     display: inline-block;
-    width: 400px; /* Zväčšenie šírky celej kontajnera */
+    width: 400px; 
 }
 
 .sort-container {
     margin-right: 50px;
-    width: 400px; /* Zväčšenie šírky celej kontajnera */
+    width: 400px; 
     right: 50px;
     margin-top: 140px;
     position: absolute;
@@ -1367,7 +1356,7 @@ body.favorite-page .heart-icon i {
     cursor: pointer;
     transition: background 0.3s;
     text-align: center;
-    width: 100%; /* Tlačidlo zaberá celú šírku */
+    width: 100%; 
     font-weight: lighter;
 
 }
@@ -1378,19 +1367,19 @@ body.favorite-page .heart-icon i {
     position: absolute;
     background: #fff7f2;
     border: 1px solid #ccc;
-    padding: 15px;  /* Zvýšené vnútorné okraje */
+    padding: 15px; 
     margin-top: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    flex-direction: column; /* Zobrazenie pod sebou */
-    width: 250px; /* Zvýšenie šírky zoznamu filtrov */
+    flex-direction: column; 
+    width: 250px; 
     z-index: 10;
 }
 
 
 /* Štýl jednotlivých filtrov */
 .filter-options label, .sort-options label{
-    display: block;  /* Každý filter na nový riadok */
-    padding: 8px 0;  /* Zväčšenie medzier medzi položkami */
+    display: block;  
+    padding: 8px 0;  
     cursor: pointer;
 }
 
@@ -1403,7 +1392,7 @@ body.favorite-page .heart-icon i {
 
 /* Štýl pre inputy na cenu */
 .price-section input[type="range"] {
-    width: 70%;  /* Celá šírka kontajnera */
+    width: 70%;  
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -1418,16 +1407,15 @@ body.favorite-page .heart-icon i {
     margin-top: 5px;
 }
 
-
 /* Štýl pre farebné okienka */
 .color-options label {
     display: flex;
     align-items: center;
-    margin-bottom: 12px; /* Zväčšenie medzier medzi farbami */
+    margin-bottom: 12px; 
 }
 
 .color-box {
-    width: 15px; /* Zvýšenie veľkosti farebných okienok */
+    width: 15px; 
     height: 15px;
     border: 1px solid #ccc;
     margin-right: 10px;
@@ -1436,12 +1424,12 @@ body.favorite-page .heart-icon i {
 
 /* Farby môžu byť iné */
 .color-options input[type="radio"] {
-    display: none;  /* Skryjeme samotný radio button */
+    display: none;  
 }
 
 /* Zvýraznenie vybranej farby */
 .color-options input[type="radio"]:checked + .color-box {
-    border: 2px solid #000;  /* Zvýraznenie vybranej farby */
+    border: 2px solid #000;  
 }
 
 /* Štýl pre rozmery (možnosti veľkosti) */
@@ -1452,7 +1440,6 @@ body.favorite-page .heart-icon i {
 
 
 /* check out karta */
-
 .checkout-container {
     display: grid;
     background-color: white;
@@ -1510,15 +1497,15 @@ input, select, .btn-primary {
 }
 
 .remember-me input {
-    width: auto; /* Zabezpečí, že checkbox nebude roztiahnutý */
-    margin: 0; /* Odstráni nežiaduce medzery */
+    width: auto; 
+    margin: 0; 
 }
 
 .remember-me label {
     margin-top: 60px;
     color:#6b747e;
-    margin-left: 8px; /* Malá medzera medzi checkboxom a textom */
-    white-space: nowrap; /* Zabezpečí, že text sa nezalomí */
+    margin-left: 8px; 
+    white-space: nowrap; 
 }
 
 
@@ -1545,13 +1532,13 @@ input, select, .btn-primary {
     background: white;
     padding: 30px;
     width: 100%;
-    max-width: 500px; /* Obmedzenie šírky na veľkých obrazovkách */
+    max-width: 500px; 
     align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
     font-weight: lighter;
-    margin: 0 auto; /* Zarovnanie na stred */
+    margin: 0 auto; 
 }
 
 
@@ -1562,26 +1549,26 @@ input, select, .btn-primary {
     display: flex;
     align-items: baseline;
     gap: 15px;
-    flex-wrap: wrap; /* Ak sa nezmestí, zalomí sa do nového riadka */
+    flex-wrap: wrap; 
 }
 
 .profil-header-container h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    font-family: inherit; /* alebo napr. Arial, sans-serif */
+    font-family: inherit; 
     font-weight: bold; 
 }
 
 .register-link {
-    color: black; /* Čierna farba */
-    text-decoration: none; /* Bez podčiarknutia */
+    color: black; 
+    text-decoration: none; 
     font-size: 18px;
     font-weight: 300;
 }
 
 .register-link:hover {
-    text-decoration: underline; /* Podčiarknutie pri hoveri */
-    color: black; /* Zachová čiernu farbu pri hoveri */
+    text-decoration: underline; 
+    color: black; 
 }
 
 .profil-header-container h3 {
@@ -1605,7 +1592,7 @@ input, select, .btn-primary {
 .divider {
     width: 1px;
     height: 24px;
-    margin: 0 10px; /* rovnomerné odsadenie od oboch strán */
+    margin: 0 10px; 
     background-color: #b6a387;
 }
 
@@ -1621,7 +1608,7 @@ input, select, .btn-primary {
     max-width: 700px;
     padding: 16px 18px; 
     border: 1.5px solid #ccc;
-    border-radius: 8px; /* zaoblené rohy */
+    border-radius: 8px; 
     font-size: 16px; 
     transition: border-color 0.3s, box-shadow 0.3s;
     box-sizing: border-box;
@@ -1636,7 +1623,7 @@ input, select, .btn-primary {
 
 
 .admin-login-link {
-    margin-top: 20px; /* odsadenie od tlačidla */
+    margin-top: 20px; 
     text-align: center;
 }
 
@@ -1649,8 +1636,8 @@ input, select, .btn-primary {
 }
 
 .admin-login-link a:hover {
-    color: #5c3b0c; /* zvýrazní sa hnedou farbou pri hoveri */
-    font-weight: bold; /* text sa trochu zvýrazní pri hoveri */
+    color: #5c3b0c; 
+    font-weight: bold;
 }
 
 
@@ -1660,7 +1647,7 @@ input, select, .btn-primary {
     justify-content: space-between;
     font-size: 14px;
     align-items: center;
-    flex-wrap: wrap; /* Ak sa nezmestia, prejdú na nový riadok */
+    flex-wrap: wrap; 
 }
 
 .radio-group label {
@@ -1827,8 +1814,8 @@ input, select, .btn-primary {
 .product-image image-upload-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Zabezpečí vyplnenie celého štvorca */
-    object-position: center; /* Vycentrovanie obrázka */
+    object-fit: cover; 
+    object-position: center; 
     border-radius: 8px;
 }
 
@@ -1970,18 +1957,17 @@ input, select, .btn-primary {
 /* pop up pre uspesnu registraciu */
 /* Štýly pre pop-up */
 .popup-successful-prihlasenie {
-    display: none; /* Skrytý, kým nie je checkbox zaškrtnutý */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Priesvitné čierne pozadie */
-    z-index: 1000; /* Nad ostatným obsahom */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
     justify-content: center;
     align-items: center;
 }
-
 
 /* Label pre pozadie, ktoré zatvára pop-up */
 .popup-background {
@@ -1990,20 +1976,17 @@ input, select, .btn-primary {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Pod obsahom pop-upu */
+    z-index: 1; 
     cursor: pointer;
 }
 
-
-/* Zabránime šíreniu kliknutia na obsah pop-upu */
-.popup-content-success * {
+/*.popup-content-success * {
     pointer-events: auto; /* Obsah pop-upu je klikateľný */
-}
+/**}*/
 
 .popup-content-success {
-    pointer-events: none; /* Zamedzíme šíreniu kliknutia na pozadie */
+    pointer-events: none; /
 }
-
 
 .popup-content-success {
     background-color: white;
@@ -2013,7 +1996,7 @@ input, select, .btn-primary {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 90%;
-    position: relative; /* Pridáme, aby close-btn mohol byť absolútne umiestnený */
+    position: relative; 
     z-index: 2;
 }
 
@@ -2030,7 +2013,6 @@ input, select, .btn-primary {
     color: #333;
 }
 
-/* Zobrazenie pop-upu, keď je checkbox zaškrtnutý */
 .popup-toggle:checked ~ .popup-successful-prihlasenie {
     display: flex;
 }
@@ -2048,19 +2030,8 @@ input, select, .btn-primary {
 }
 
 .close-btn-profil-succes:hover {
-    color: #3a2a13; /* Farba pri hoveri, aby ladila s dizajnom */
+    color: #3a2a13; 
 }
-
-/* Zabránime šíreniu kliknutia na obsah pop-upu */
-.popup-content-success * {
-    pointer-events: auto; /* Obsah pop-upu je klikateľný */
-}
-
-.popup-content-success {
-    pointer-events: none; /* Zamedzíme šíreniu kliknutia na pozadie */
-}
-
-
 
 .order-success {
     display: flex;
@@ -2074,12 +2045,12 @@ input, select, .btn-primary {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* celé výška obrazovky */
+    height: 100vh; 
     padding: 0 20px;
     text-align: center;
 }
 .order-success i {
-    color: #342004; /* zelená fajka */
+    color: #342004; 
     font-size: 200px;
     margin-bottom: 20px;
     
@@ -2159,7 +2130,6 @@ input, select, .btn-primary {
     margin-left: 10px;
 }
 
-/* Skrytý checkbox */
 .toggle-input {
     display: none;
 }
@@ -2194,53 +2164,52 @@ input, select, .btn-primary {
 /* Pre obrazovky menšie ako 300px */
 @media only screen and (max-width: 300px) {
     html, body {
-        overflow-x: hidden; /* zabráni horizontálnemu scrollovaniu */
+        overflow-x: hidden; 
         margin: 0;
         padding: 0;
         padding-top: 30px;
-        background-color: #ebe2d1; /* Nastavené pozadie */
+        background-color: #ebe2d1; 
     }
 
-     /* Sekcie so zmeneným pozadím */
      .intro-section, .about-us, #kategorie, .products, .newsletter-section {
-        background-color: #ebe2d1; /* Nastavené pozadie pre sekcie */
+        background-color: #ebe2d1;
     }
 
     .product-item {
-        background-color: #ebe2d1; /* Nastavené pozadie pre produktové karty */
+        background-color: #ebe2d1; 
     }
 
     .popup-menu {
-        background-color: #ebe2d1; /* Zmenené pozadie pre popup menu */
+        background-color: #ebe2d1; 
     }
 
     header, .header-main {
-        background-color: #ebe2d1; /* Nastavené pozadie pre hlavičku */
+        background-color: #ebe2d1; 
     }
 
     .nav-links {
-        flex-direction: row; /* Ikony vedľa seba */
+        flex-direction: row; 
         gap: 5px;
     }
 
     .nav-links li {
-        margin: 0 5px; /* Menšie medzery medzi ikonami */
+        margin: 0 5px; 
     }
 
     .nav-links a {
-        font-size: 18px; /* Zmenšené ikony */
+        font-size: 18px; 
     }
 
     .menu-icon {
-        font-size: 20px; /* Menšia ikona menu */
+        font-size: 20px; 
     }
 
     .logo {
-        font-size: 1.5rem; /* Menšie logo */
+        font-size: 1.5rem; 
     }
 
     .menu-icon {
-        display: block; /* Zobrazíme ikonu menu */
+        display: block; 
         font-size: 24px;
         cursor: pointer;
         position: absolute;
@@ -2250,25 +2219,25 @@ input, select, .btn-primary {
     }
     
     .menu-icon:hover {
-        color: red; /* Farba pri hover */
+        color: red; 
     }
     .popup-menu {
         position: fixed;
         top: 0;
-        left: -100vw; /* Use viewport width to ensure it's fully off-screen */
-        width: 100vw; /* Full viewport width */
-        height: 100vh; /* Full viewport height */
+        left: -100vw; 
+        width: 100vw; 
+        height: 100vh; 
         background-color: #ebe2d1;
-        z-index: 10000; /* Ensure it's above everything */
+        z-index: 10000; 
         transition: left 0.3s ease-in-out;
-        overflow-y: auto; /* Add scrolling if content is too much */
+        overflow-y: auto; 
         box-sizing: border-box;
         padding: 15px;
     }
 
-    /* Menu appears when checkbox is checked */
+    /* Checkbox pre menu */
     .menu-checkbox:checked + .popup-menu {
-        left: 0; /* Bring into view */
+        left: 0; 
     }
 
     .popup-content {
@@ -2277,15 +2246,15 @@ input, select, .btn-primary {
     }
 
     .popup-content ul {
-        margin-top: 20px; /* Smaller margin */
+        margin-top: 20px; 
     }
 
     .popup-content ul li {
-        margin: 8px 0; /* Less margin between items */
+        margin: 8px 0; 
     }
 
     .popup-content ul li a {
-        font-size: 16px; /* Smaller font */
+        font-size: 16px; 
         padding: 8px 0;
     }
 
@@ -2298,17 +2267,16 @@ input, select, .btn-primary {
     }
 
     header {
-        height: 70vh; /* Zníženie výšky na stredne veľké obrazovky */
+        height: 70vh; 
     }
 
     .header-content h2 {
-        font-size: 7vmin; /* Veľkosť písma, ktorá sa prispôsobí obrazovke */
+        font-size: 7vmin; 
     }
-
-    /* Responzívne pre .intro-text */
+    /*intro text pod hlavnym obrazkom*/
     .intro-text {
-        font-size: 3vmin; /* Zníženie písma pre stredné obrazovky */
-        padding: 12px; /* Pridanie paddingu */
+        font-size: 3vmin; 
+        padding: 12px; 
     }
 
     .container-profil {
@@ -2318,12 +2286,12 @@ input, select, .btn-primary {
 
     /* Pre kategórie */
     .kategorie {
-        flex-direction: column; /* Zoradenie položiek vertikálne */
+        flex-direction: column; 
     }
 
     .kategoria {
-        min-width: 100%; /* Každá kategória zaberie celú šírku */
-        margin-bottom: 20px; /* Medzera medzi položkami */
+        min-width: 100%; 
+        margin-bottom: 20px; 
     }
 
     .products {
@@ -2339,7 +2307,7 @@ input, select, .btn-primary {
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        width: 90%; /* Nastavená šírka pre mobilné zariadenia */
+        width: 90%; 
         padding: 0.5rem;
         background-color: #ebe2d1;
     }
@@ -2382,44 +2350,44 @@ input, select, .btn-primary {
     }
 
     .modal-content {
-        width: 80%; /* Širšie na mobiloch */
+        width: 80%; 
         margin: 10% auto;
     }
 
     .newsletter input, .newsletter button {
-        width: 100%; /* Zaberú celú šírku */
+        width: 100%; 
         padding: 10px;
         font-size: 16px;
     }
 
     .container-profil {
-        width: 90%; /* Zmenšenie šírky na mobiloch */
-        padding: 20px; /* Zmenšený padding */
+        width: 90%; 
+        padding: 20px; 
     }
 
     .profil-header-container {
-        flex-direction: column; /* Nadpis a link pod sebou */
+        flex-direction: column; 
         text-align: center;
     }
 
     .profil-header-container h2 {
-        border-right: none; /* Na mobiloch odstránime pravý border */
+        border-right: none; 
         padding-right: 0;
         margin-bottom: 5px;
     }
 
     .form-control {
-        font-size: 14px; /* Menšie písmo pre vstupy */
+        font-size: 14px; 
         padding: 8px;
     }
 
     .btn-profil {
-        font-size: 14px; /* Menšie tlačidlo */
+        font-size: 14px; 
         padding: 8px;
     }
 
     .cart-container {
-        flex-direction: column; /* Košík sa zobrazí pod sebou */
+        flex-direction: column; 
         gap: 15px;
     }
 
@@ -2448,21 +2416,21 @@ input, select, .btn-primary {
 
 
     .checkout-steps {
-        font-size: 0.9rem; /* Zníženie veľkosti písma na menších obrazovkách */
-        margin: 10px 0; /* Zníženie okrajov */
+        font-size: 0.9rem; 
+        margin: 10px 0; 
     }
 
     .step {
-        font-size: 1.4rem; /* Menšie písmo pre kroky */
-        padding: 4px 12px; /* Zmenšené paddingy */
+        font-size: 1.4rem; 
+        padding: 4px 12px; 
     }
 
     .step-separator {
-        font-size: 1.4rem; /* Menšie písmo pre oddelovače */
+        font-size: 1.4rem; 
     }
 
     .order-success i {
-        color: #342004; /* zelená fajka */
+        color: #342004; 
         font-size: 100px;
         margin-bottom: 20px;   
     }
@@ -2567,7 +2535,7 @@ input, select, .btn-primary {
     }
 
     .detail-image {
-        order: 1; /* Obrázok bude prvý */
+        order: 1; 
         width: 100%;
         text-align: center;
         margin-bottom: 15px;
@@ -2666,7 +2634,7 @@ input, select, .btn-primary {
 
 @media only screen and (max-width: 900px) {
     .header-main, header {
-        width: 100vw; /* presná šírka viewportu */
+        width: 100vw; 
         margin: 0;
         padding: 0;
         background-size: cover;
